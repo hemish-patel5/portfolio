@@ -10,6 +10,7 @@ import Projects from "@/pages/Projects";
 import Contact from "@/pages/Contact";
 import ProjectDetail from "@/pages/ProjectDetail";
 
+// This file sets up the routing for the whole app
 function App() {
   return (
     <BrowserRouter>
@@ -18,8 +19,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<ProjectDetail />} />
-        <Route path="/projects/:id" element={<Contact />} />
+        <Route path="/projects/:id" element={<ProjectDetail />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
       <Footer />
