@@ -11,4 +11,10 @@ export const projects = [
     description: "Interpretable ML model",
     details: "More details about ML project...",
   },
+  {
+    id: "skin-cancer-ml",
+    title: "Skin Cancer Detection",
+    description: "Interpretable ML model",
+    details: "More details about ML project...",
+  },
 ];
