@@ -1,24 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import "tailwindcss";
 
 
-
 @theme {
-    --color-background: #f0f0f0;
-    --color-foreground: #333333;
-
-    --radius: 0.75rem;
-
-}
-
-@layer base{
-    html{
-        scroll-behavior: smooth;
-
-    }
-
-    body{
-        font-family: "Inter", sans-serif;
-    }
-
-
+    --font-r: Roboto Condensed, "sans-serif"
 }
