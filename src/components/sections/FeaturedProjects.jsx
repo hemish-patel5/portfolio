@@ -11,12 +11,12 @@ export default function FeaturedProjects() {
           Featured Projects
         </h2>
 
-        <div className="flex gap-6 overflow-x-auto py-4 px-5 snap-x snap-mandatory scrollbar-hide">
+        <div className="flex gap-6 overflow-x-auto py-4 px-5 snap-x snap-mandatory">
           {featured.map((p) => (
             <Link
               key={p.id}
               to={`/projects/${p.id}`}
-              className="min-w-[300px] md:min-w-[400px] snap-center"
+              className="min-w-[300px] min-h-[250px] md:min-w-[400px] snap-center"
             >
               {/* Main Card Container */}
               <div className=" hover:scale-[1.04] h-full bg-black border border-gray-800 p-8 rounded-2xl hover:border-gray-400 transition-all duration-300 flex flex-col justify-between group">

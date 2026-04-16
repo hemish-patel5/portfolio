@@ -12,7 +12,13 @@ export const experiences = [
       "Configured and integrated embedded systems (Raspberry Pi and SKR board), ensuring stable communication between hardware components and software services",
     ],
     date: "November 2025 - February 2026",
-    images: ["", "", "", "", ""],
+    images: [
+      new URL("../assets/1.jpeg", import.meta.url).href,
+      new URL("../assets/2.jpeg", import.meta.url).href,
+      new URL("../assets/3.jpeg", import.meta.url).href,
+      new URL("../assets/4.jpeg", import.meta.url).href,
+      new URL("../assets/5.jpeg", import.meta.url).href,
+    ],
   },
   {
     id: "cashier",
