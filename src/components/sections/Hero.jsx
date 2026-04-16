@@ -2,7 +2,7 @@ import profileImg from "@/assets/profile1.png";
 
 export default function Hero() {
   return (
-    <section className="min-h-[50vh] flex items-center justify-center px-6">
+    <section className="min-h-[50vh] flex items-center justify-center px-6 py-10">
       {/* Main Container: 
           - flex-col for mobile (stacked)
           - md:flex-row for desktop (side-by-side)
@@ -48,7 +48,7 @@ export default function Hero() {
             <img
               src={profileImg}
               alt="Hemish"
-              className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl transition-all duration-500"
+              className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl hover:scale-[1.22] shadow-2xl transition-all duration-500"
             />
             {/* Decorative background accent */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-200 -z-10 rounded-full"></div>

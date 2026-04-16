@@ -12,9 +12,9 @@ export const projects = [
     details: "More details about ML project...",
   },
   {
-    id: "skin-cancer-ml",
-    title: "Skin Cancer Detection",
-    description: "Interpretable ML model",
-    details: "More details about ML project...",
+    id: "random-shi",
+    title: "Random shi",
+    description: "aldkfasldjfalksfjkasd",
+    details: "More details about asdlfasdfoeri...",
   },
 ];
