@@ -1,46 +1,83 @@
 import { contact } from "@/data/contact";
+import GithubIcon from "@/assets/github.svg";
+import LinkedInIcon from "@/assets/linkedin.png";
 
 export default function Contact() {
   return (
     <section className="min-h-screen bg-gray-950 text-white py-16 px-6">
       <div className="max-w-5xl mx-auto">
-
         {/* Header */}
         <div className="mb-12 text-center">
-          <p className="text-xs uppercase tracking-[0.35em] text-blue-400 mb-3">Get in touch</p>
-          <h1 className="text-5xl md:text-6xl font-medium tracking-tight">Contact Me</h1>
-          <p className="mt-2 text-sm text-gray-500">Open to new opportunities and collaborations</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-blue-400 mb-3">
+            Get in touch
+          </p>
+          <h1 className="text-5xl md:text-6xl font-medium tracking-tight">
+            Contact Me
+          </h1>
+          <p className="mt-2 text-sm text-gray-500">
+            Open to new opportunities and collaborations
+          </p>
 
+          <div className="hover:scale-[1.05] w-50 mx-auto mt-5 border border-gray-700 rounded-xl p-5 bg-gray-900">
+            <h1 className="text-4xl hover:text-blue-300 font-medium mb-8 ">
+              Links
+            </h1>
 
-<div className="max-w-xs mx-auto mt-10 border border-gray-700 rounded-xl p-6 bg-gray-900">
-  <h1>
-    Links
-  </h1>
-  <div className="flex flex-wrap items-center justify-between">
-      <h1 className="py-5 text-2xl font-bold">git</h1>
-      <p>sdfsdf</p>
-    </div>
-</div>
+            <div className="flex  flex-wrap items-center justify-between">
+              <div className="w-16 h-16 p-2 bg-white rounded-xl items-center hover:scale-[1.22] shadow-2xl transition-all duration-300">
+                <a
+                  href={"https://github.com/hemish-patel5"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={GithubIcon}
+                    alt="Hemish"
+                    className=" object-cover rounded-2xl "
+                  />
+                </a>
+              </div>
 
+              <a
+                href={"https://linkedin.com/in/hemish--patel"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={LinkedInIcon}
+                  alt="Hemish"
+                  className="hover:scale-[1.22] shadow-2xl transition-all duration-300 w-16 h-16 object-cover rounded-xl "
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
-
         <div className="grid gap-6 lg:grid-cols-2 items-start">
-
           {/* Info card */}
           <div className="rounded-2xl bg-white p-7 shadow-xl">
-            <h2 className="text-lg font-medium text-gray-900">Reach out anytime</h2>
+            <h2 className="text-lg font-medium text-gray-900">
+              Reach out anytime
+            </h2>
             <p className="mt-2 text-sm text-gray-500 leading-4">
-              I'm currently open to new opportunities and collaborations. Send a message and I'll respond as soon as I can.
+              I'm currently open to new opportunities and collaborations. Send a
+              message and I'll respond as soon as I can.
             </p>
 
             <hr className="my-5 border-t-2 border-gray-200" />
 
             <div className="flex flex-col gap-3">
               {contact.map((c) => (
-                <div key={c.id} className="rounded-xl bg-gray-100 px-4 py-3 hover:scale-105 transition-transform">
-                  <p className="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-medium">{c.id}</p>
-                  <p className="mt-1 text-sm font-medium text-gray-900">{c.info}</p>
+                <div
+                  key={c.id}
+                  className="rounded-xl bg-gray-100 px-4 py-3 hover:scale-105 transition-transform"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.2em] text-blue-400 font-medium">
+                    {c.id}
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-gray-900">
+                    {c.info}
+                  </p>
                 </div>
               ))}
             </div>
@@ -68,7 +105,9 @@ export default function Contact() {
               </label>
 
               <label className="block">
-                <span className="text-xs font-medium text-gray-400">Message</span>
+                <span className="text-xs font-medium text-gray-400">
+                  Message
+                </span>
                 <textarea
                   rows={5}
                   placeholder="Tell me about your project or question"
@@ -84,7 +123,6 @@ export default function Contact() {
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>

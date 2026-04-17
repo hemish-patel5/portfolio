@@ -6,17 +6,18 @@ export default function Projects() {
   return (
     <section className="py-10 px-6 bg-gray-950 min-h-screen">
       <div className="max-w-3xl mx-auto mb-16 text-center">
-        <h1 className="text-5xl md:text-6xl text-white font-medium tracking-tight">Projects</h1>
+        <h1 className="text-5xl md:text-6xl text-white font-medium tracking-tight">
+          Projects
+        </h1>
       </div>
 
       <div className="max-w-3xl mx-auto">
         <div className="flex flex-col gap-10">
           {projects.map((p) => (
-            <div 
+            <div
               key={p.id}
-              className="flex flex-col md:flex-row items-stretch bg-gray-100 hover:border-blue-300 border-2 border-transparent rounded-xl relative z-0 hover:z-50 transition-all duration-300"
+              className=" hover:scale- [1.02] flex flex-col md:flex-row items-stretch bg-gray-100 hover:border-blue-300 border-2 border-transparent rounded-xl relative z-0 hover:z-50 transition-all duration-300"
             >
-              
               {/* LEFT SIDE: TEXT CONTENT */}
               <div className="flex-1 p-8 flex flex-col justify-center rounded-l-xl">
                 <Link to={`/projects/${p.id}`}>
@@ -27,15 +28,19 @@ export default function Projects() {
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {p.description}
                 </p>
-                
+
                 <div className="mt-6">
-                  <a 
-                    href={p.github} 
-                    target="_blank" 
+                  <a
+                    href={p.github}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-gray-900 font-bold hover:text-black transition-transform duration-300 hover:scale-105 origin-left"
                   >
-                    <img src={GithubIcon} alt="GitHub logo" className="w-6 h-7" />
+                    <img
+                      src={GithubIcon}
+                      alt="GitHub logo"
+                      className="w-6 h-7"
+                    />
                     View on GitHub
                   </a>
                 </div>
@@ -55,7 +60,6 @@ export default function Projects() {
                              hover:origin-center"
                 />
               </div>
-              
             </div>
           ))}
         </div>
