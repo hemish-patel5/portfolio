@@ -7,41 +7,43 @@ export default function Experience() {
 
   const activeImage = images.find((i) => i.id === openImage);
 
-  console.log("Current openImage state:", openImage);
   return (
     <div className="py-10 px-5 bg-gray-950">
       {/* Modal created when Image is clicked */}
       {openImage && activeImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
           onClick={() => setOpenImage(null)}
         >
           <button
-            className="absolute cursor-pointer top-4 right-4 text-white text-5xl hover:text-gray-400"
+            className="absolute cursor-pointer top-4 right-4 text-white text-4xl md:text-5xl hover:text-gray-400 z-[60]"
             onClick={() => setOpenImage(null)}
           >
             ✕
           </button>
 
-          {/* Container for Image and description */}
+          {/* Container for Image and description - Changed to flex-col for mobile */}
           <div
-            className="flex flex-row w-full max-w-6xl mx-auto overflow-hidden border border-gray-800"
+            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden border border-gray-800 bg-black rounded-xl max-h-[90vh] overflow-y-auto md:overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Container for Image*/}
-            <div className="md:w-1/2  border-gray-300">
+            {/* Container for Image - Height fixed for mobile, auto for desktop */}
+            <div className="w-full md:w-1/2 bg-neutral-900 flex items-center justify-center">
               <img
                 src={activeImage.src}
-                className=" w-full h-full md:object-cover"
-              ></img>
+                alt={activeImage.title}
+                className="w-full h-auto max-h-[40vh] md:max-h-full md:h-full object-contain md:object-cover"
+              />
             </div>
 
-            {/* Container for Description*/}
-            <div className="my-auto md:w-1/2 bg-black  border-gray-300">
-              <h1 className="text-3xl text-white p-8">{activeImage.title}</h1>
-              <h2 className=" text-2xl font-sm px-10 text-white">
+            {/* Container for Description */}
+            <div className="w-full md:w-1/2 bg-black flex flex-col justify-center p-6 md:p-12">
+              <h1 className="text-2xl md:text-4xl text-white font-bold mb-4">
+                {activeImage.title}
+              </h1>
+              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
                 {activeImage.description}
-              </h2>
+              </p>
             </div>
           </div>
         </div>
@@ -89,13 +91,11 @@ export default function Experience() {
                       className="group relative flex-shrink-0 cursor-pointer"
                       onClick={() => setOpenImage(index + 1)}
                     >
-                      .{/* 2. The Image with your hover filters */}
                       <img
                         src={i}
                         alt="Work highlight"
                         className="h-48 w-72 object-cover rounded-lg border border-gray-700 transition-transform duration-300 group-hover:opacity-50 group-hover:brightness-125"
                       />
-                      {/* 3. The "See More" overlay - hidden by default, visible on group-hover */}
                       <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
                         <span className="text-white font-bold text-sm tracking-widest uppercase px-4 py-2 rounded-full">
                           See More

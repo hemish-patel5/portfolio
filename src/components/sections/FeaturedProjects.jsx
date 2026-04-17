@@ -10,8 +10,8 @@ export default function FeaturedProjects() {
         <h2 className="text-4xl font-bold text-center  mb-8">
           Featured Projects
         </h2>
-
-        <div className="flex gap-6 overflow-x-auto py-4 px-5 snap-x snap-mandatory">
+        {/* The main info box */}
+        <div className="flex gap-6 overflow-x-auto py-4 px-5 snap-x snap-proximity">
           {featured.map((p) => (
             <Link
               key={p.id}

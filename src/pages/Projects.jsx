@@ -20,11 +20,10 @@ export default function Projects() {
             >
               {/* LEFT SIDE: TEXT CONTENT */}
               <div className="flex-1 p-8 flex flex-col justify-center rounded-l-xl">
-                <Link to={`/projects/${p.id}`}>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-4 hover:text-blue-700 transition-colors">
-                    {p.title}
-                  </h2>
-                </Link>
+                {/*<Link to={`/projects/${p.id}`}> --- potential link */}
+                <h2 className="text-3xl font-bold text-gray-900 mb-4 hover:text-blue-700 transition-colors">
+                  {p.title}
+                </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
                   {p.description}
                 </p>
