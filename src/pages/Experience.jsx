@@ -2,10 +2,10 @@ import { experiences } from "@/data/work";
 
 export default function Experience() {
   return (
-    <div className="py-10 px-5 bg-gray-900">
+    <div className="py-10 px-5 bg-gray-950">
       {/* Main Heading */}
       <div className="max-w-6xl mx-auto mb-12">
-        <h1 className="text-5xl font-bold text-white text-center">
+        <h1 className="text-5xl md:text-6xl text-white font-medium tracking-tight text-center">
           Work Experience
         </h1>
       </div>
@@ -16,7 +16,7 @@ export default function Experience() {
           {experiences.map((w) => (
             <div
               key={w.id}
-              className="p-8 bg-black rounded-lg hover:scale-[1.02] transition-all"
+              className="p-8 bg-black border border-gray-500 rounded-lg hover:scale-[1.02] transition-all"
             >
               <div className="flex justify-between items-start mb-4">
                 <div>

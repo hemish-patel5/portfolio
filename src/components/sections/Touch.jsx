@@ -1,6 +1,6 @@
 export default function CTA() {
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 mb-26">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-2xl font-semibold">Let's Connect!</h2>
 
@@ -10,9 +10,9 @@ export default function CTA() {
 
         <a
           href="/contact"
-          className=" hover:scale-105 transition-transform inline-block mt-6 px-6 py-3 bg-black text-white rounded"
+          className=" font-medium hover:scale-105 transition-transform inline-block mt-6 px-6 py-3 bg-black text-white rounded"
         >
-          Get in Touch
+          Contact Me
         </a>
       </div>
     </section>

@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { navlinks } from "@/data/layout";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Experience", path: "/experience" },
-    { name: "Projects", path: "/projects" },
-    { name: "Contact", path: "/contact" },
-  ];
 
   return (
     <nav className="relative border-b border-gray-800 bg-black text-white w-full font-sans">
@@ -17,14 +12,14 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-0 md:px-8 h-16">
         {/* 1. Logo Section (Added pl-8 for mobile) */}
         <div className="pl-8 md:pl-0 md:w-1/3">
-          <h1 className="text-xl font-semibold tracking-tight whitespace-nowrap">
-            Hemish Patel
+          <h1 className="text-xl text-blue-300 font-semibold tracking-tight whitespace-nowrap">
+            Hemish Patel's Portfolio
           </h1>
         </div>
 
         {/* 2. Desktop Links */}
-        <div className="hidden md:flex w-1/3 h-full justify-center text-sm font-medium">
-          {navLinks.map((link) => (
+        <div className="hidden md:flex w-1/3 h-full justify-center text-md font-medium">
+          {navlinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
@@ -72,7 +67,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden absolute top-[63px] left-0 w-full bg-black border-b border-gray-800 z-50">
           <div className="flex flex-col">
-            {navLinks.map((link) => (
+            {navlinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}

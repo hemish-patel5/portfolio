@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["'Playfair Display'", "serif"],
+        sans: ['Roboto Condensed', 'sans-serif'],
       },
     },
   },
