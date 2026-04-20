@@ -15,8 +15,8 @@ export const experiences = [
     images: [
       new URL("../assets/1.webp", import.meta.url).href,
       new URL("../assets/2.webp", import.meta.url).href,
-      new URL("../assets/3.webp", import.meta.url).href,
       new URL("../assets/4.webp", import.meta.url).href,
+      new URL("../assets/3.webp", import.meta.url).href,
       new URL("../assets/5.webp", import.meta.url).href,
     ],
   },
@@ -85,14 +85,14 @@ export const images = [
   },
   {
     id: 3,
-    src: new URL("../assets/3.jpeg", import.meta.url).href,
+    src: new URL("../assets/4.jpeg", import.meta.url).href,
     title: "⚙️ OttoEject ",
     description:
       "Calibrated and tested the world's first automated print handling system designed to manage and store multiple print jobs without manual intervention. ",
   },
   {
     id: 4,
-    src: new URL("../assets/4.jpeg", import.meta.url).href,
+    src: new URL("../assets/3.jpeg", import.meta.url).href,
     title: "🔧 Raspberry Pi / SKR Board Setup ",
     description:
       "Configured, debugged, and integrated Raspberry Pi and SKR board systems, resolving hardware–software communication issues and ensuring reliable execution of software-controlled automation. ",
