@@ -2,8 +2,8 @@ import { skills } from "@/data/skills";
 
 export default function SkillsPreview() {
   const getSkillName = (url) => {
-    const match = url.match(/icons\/([^/]+)\//);
-    return match ? match[1].replace("cplusplus", "c++") : "skill";
+    const skill = url.split("/icons/")[1]?.split("/")[0];
+    return skill ? skill.replace("cplusplus", "c++") : "skill";
   };
 
   return (
@@ -33,9 +33,7 @@ export default function SkillsPreview() {
                 alt={`${getSkillName(url)} logo`}
                 className="h-16 w-16 object-contain grayscale transition duration-300 group-hover:grayscale-0"
               />
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-gray-500">
-                {getSkillName(url)}
-              </p>
+
             </div>
           ))}
         </div>
