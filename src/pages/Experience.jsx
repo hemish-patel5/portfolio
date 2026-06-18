@@ -8,11 +8,11 @@ export default function Experience() {
   const activeImage = images.find((i) => i.id === openImage);
 
   return (
-    <div className="py-10 px-5 bg-gray-950">
+    <div className="py-10 px-5 bg-white">
       {/* Modal created when Image is clicked */}
       {openImage && activeImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          className="fixed inset-0 z-50 bg-black flex items-center justify-center p-4"
           onClick={() => setOpenImage(null)}
         >
           <button
@@ -51,7 +51,7 @@ export default function Experience() {
 
       {/* Main Heading */}
       <div className="max-w-6xl mx-auto mb-12">
-        <h1 className="text-5xl md:text-6xl text-white font-medium tracking-tight text-center">
+        <h1 className="text-5xl md:text-6xl text-black font-medium tracking-tight text-center">
           Work Experience
         </h1>
       </div>
