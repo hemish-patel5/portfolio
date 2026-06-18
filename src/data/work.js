@@ -62,7 +62,7 @@ export const experiences = [
     location: "Auckland",
     description: [
       "Raised funds for Make-A-Wish by engaging with the public and promoting donations outside a supermarket for one week",
-      "Developed strong communication and interpersonal skills while interacting with a wide range of people ",
+      "Developed strong communication and interpersonal skills while interacting with a wide range of people",
     ],
     date: "2018",
   },
@@ -72,36 +72,36 @@ export const images = [
   {
     id: 1,
     src: new URL("../assets/1.jpeg", import.meta.url).href,
-    title: "️🖨️ Prusa CORE One 3D Printer",
+    title: "Prusa CORE One 3D Printer",
     description:
-      "Calibrated and integrated the Prusa CORE One with the OttoEject system, testing automated print workflows and ensuring reliable end-to-end execution of software-driven print jobs. ",
+      "Calibrated and integrated the Prusa CORE One with the OttoEject system, testing automated print workflows and ensuring reliable end-to-end execution of software-driven print jobs.",
   },
   {
     id: 2,
     src: new URL("../assets/2.jpeg", import.meta.url).href,
-    title: "💻 Software Testing ",
+    title: "Software Testing",
     description:
-      "Designed and executed structured test scenarios on the OttoEngine platform, systematically documenting results in a spreadsheet, identifying bugs and edge cases, and validating system behaviour. ",
+      "Designed and executed structured test scenarios on the OttoEngine platform, systematically documenting results in a spreadsheet, identifying bugs and edge cases, and validating system behaviour.",
   },
   {
     id: 3,
     src: new URL("../assets/4.jpeg", import.meta.url).href,
-    title: "⚙️ OttoEject ",
+    title: "OttoEject",
     description:
-      "Calibrated and tested the world's first automated print handling system designed to manage and store multiple print jobs without manual intervention. ",
+      "Calibrated and tested the world's first automated print handling system designed to manage and store multiple print jobs without manual intervention.",
   },
   {
     id: 4,
     src: new URL("../assets/3.jpeg", import.meta.url).href,
-    title: "🔧 Raspberry Pi / SKR Board Setup ",
+    title: "Raspberry Pi / SKR Board Setup",
     description:
-      "Configured, debugged, and integrated Raspberry Pi and SKR board systems, resolving hardware–software communication issues and ensuring reliable execution of software-controlled automation. ",
+      "Configured, debugged, and integrated Raspberry Pi and SKR board systems, resolving hardware-software communication issues and ensuring reliable execution of software-controlled automation.",
   },
   {
     id: 5,
     src: new URL("../assets/5.jpeg", import.meta.url).href,
-    title: "🎨 Figma / UI Design ",
+    title: "Figma / UI Design",
     description:
-      "Designed and prototyped a new UI feature to improve user interaction and workflow efficiency within the platform. ",
+      "Designed and prototyped a new UI feature to improve user interaction and workflow efficiency within the platform.",
   },
 ];

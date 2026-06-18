@@ -1,12 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-    --font-sans: 'Roboto Condensed', sans-serif;
+    --font-sans: 'Titillium Web', sans-serif;
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
+    min-width: 320px;
+    margin: 0;
+    background: #f8fafc;
+    color: #030712;
     font-family: var(--font-sans);
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(96, 165, 250, 0.35);
+    color: #020617;
+  }
+
+  a,
+  button,
+  input,
+  textarea {
+    outline-color: #60a5fa;
+  }
+}
+
+@layer components {
+  .section-shell {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .section-pad {
+    padding-block: clamp(4rem, 8vw, 7rem);
+  }
+
+  .paper-grid {
+    background-color: #f8fafc;
+    background-image:
+      linear-gradient(rgba(59, 130, 246, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(59, 130, 246, 0.08) 1px, transparent 1px);
+    background-size: 58px 58px;
+  }
+
+  .dark-grid {
+    background-color: #020617;
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.11) 1px, transparent 1px);
+    background-size: 58px 58px;
+  }
+
+  .section-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    color: #60a5fa;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+  }
+
+  .section-kicker::before {
+    content: "";
+    width: 2.4rem;
+    height: 2px;
+    background: #60a5fa;
+  }
+
+  .section-title {
+    margin-top: 0.75rem;
+    font-size: clamp(2.75rem, 7vw, 5.8rem);
+    line-height: 0.9;
+    font-weight: 800;
+    letter-spacing: 0;
+  }
+
+  .blueprint-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: #020617;
+    box-shadow: 0 24px 80px rgba(2, 6, 23, 0.22);
+  }
+
+  .paper-card {
+    border: 1px solid rgba(15, 23, 42, 0.1);
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.08);
+  }
+
+  .focus-lift {
+    transition:
+      transform 220ms ease,
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      background-color 220ms ease,
+      color 220ms ease;
+  }
+
+  .focus-lift:hover {
+    transform: translateY(-4px);
   }
 }

@@ -1,77 +1,76 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
 import { navlinks } from "@/data/layout";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname } = useLocation();
 
   return (
-    <nav className="relative border-b border-gray-800 bg-black text-white w-full font-sans">
-      {/* MAIN NAV BAR */}
-      <div className="flex items-center justify-between px-0 md:px-8 h-16">
-        {/* 1. Logo Section (Added pl-8 for mobile) */}
-        <div className="pl-8 md:pl-0 md:w-1/3">
-          <h1 className=" hover:text-blue-200 text-xl text-blue-300 font-semibold tracking-tight whitespace-nowrap">
-            Hemish Patel's Portfolio
-          </h1>
+    <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/95 text-white backdrop-blur">
+      <div className="section-shell flex h-[72px] items-center justify-between">
+        <Link
+          to="/"
+          onClick={() => setIsOpen(false)}
+          className="group flex items-center gap-3"
+        >
+          <span className="grid h-10 w-10 place-items-center border border-blue-400 bg-blue-400 text-lg font-extrabold text-black transition group-hover:bg-white">
+            HP
+          </span>
+          <span className="leading-tight">
+            <span className="block text-lg font-bold text-white">
+              Hemish Patel
+            </span>
+            <span className="block text-xs uppercase tracking-[0.22em] text-gray-500">
+              Portfolio
+            </span>
+          </span>
+        </Link>
+
+        <div className="hidden items-center gap-2 md:flex">
+          {navlinks.map((link) => {
+            const isActive = pathname === link.path;
+
+            return (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={`px-4 py-2 text-sm font-semibold transition ${
+                  isActive
+                    ? "bg-white text-black"
+                    : "text-gray-300 hover:bg-white/10 hover:text-white"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* 2. Desktop Links */}
-        <div className="hidden md:flex w-1/3 h-full justify-center text-md font-medium">
-          {navlinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="px-6 flex items-center hover:bg-gray-800 transition-colors"
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-
-        {/* 3. Mobile Menu Button Container */}
-        <div className="md:w-1/3 h-full flex justify-end">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden h-full px-5 flex items-center hover:bg-gray-800 transition-colors"
-          >
-            {/* Hamburger Icon */}
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
+        <button
+          type="button"
+          aria-label="Toggle navigation menu"
+          onClick={() => setIsOpen(!isOpen)}
+          className="grid h-11 w-11 place-items-center border border-white/15 text-white transition hover:border-blue-400 hover:text-blue-300 md:hidden"
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
 
-      {/* MOBILE DROPDOWN MENU */}
       {isOpen && (
-        <div className="md:hidden absolute top-[63px] left-0 w-full bg-black border-b border-gray-800 z-50">
-          <div className="flex flex-col">
+        <div className="absolute left-0 top-full w-full border-b border-white/10 bg-black text-white shadow-2xl md:hidden">
+          <div className="section-shell py-4">
             {navlinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className="px-8 py-5 border-t border-gray-900 hover:bg-gray-800 transition-colors"
+                className={`block border-t border-white/10 px-1 py-4 text-lg font-semibold transition first:border-t-0 ${
+                  pathname === link.path
+                    ? "text-blue-300"
+                    : "text-gray-300 hover:text-white"
+                }`}
               >
                 {link.name}
               </Link>

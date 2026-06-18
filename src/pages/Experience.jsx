@@ -1,47 +1,48 @@
 import { useState } from "react";
-import { experiences } from "@/data/work";
-import { images } from "@/data/work";
+import { Calendar, MapPin, X, ZoomIn } from "lucide-react";
+import { experiences, images } from "@/data/work";
 
 export default function Experience() {
   const [openImage, setOpenImage] = useState(null);
-
   const activeImage = images.find((i) => i.id === openImage);
 
   return (
-    <div className="py-10 px-5 bg-white">
-      {/* Modal created when Image is clicked */}
+    <section className="paper-grid min-h-screen">
       {openImage && activeImage && (
         <div
-          className="fixed inset-0 z-50 bg-black flex items-center justify-center p-4"
+          className="fixed inset-0 z-[80] flex items-center justify-center bg-black/95 p-4 text-white backdrop-blur"
           onClick={() => setOpenImage(null)}
         >
           <button
-            className="absolute cursor-pointer top-4 right-4 text-white text-4xl md:text-5xl hover:text-gray-400 z-[60]"
-            onClick={() => setOpenImage(null)}
+            type="button"
+            aria-label="Close image preview"
+            className="absolute right-4 top-4 z-[90] grid h-12 w-12 place-items-center border border-white/20 bg-white/10 text-white transition hover:border-blue-300 hover:text-blue-300"
+            onClick={(event) => {
+              event.stopPropagation();
+              setOpenImage(null);
+            }}
           >
-            ✕
+            <X size={26} />
           </button>
 
-          {/* Container for Image and description - Changed to flex-col for mobile */}
           <div
-            className="flex flex-col md:flex-row w-full max-w-5xl mx-auto overflow-hidden border border-gray-800 bg-black rounded-xl max-h-[90vh] overflow-y-auto md:overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
+            className="grid max-h-[90vh] w-full max-w-6xl overflow-y-auto border border-white/15 bg-black shadow-2xl md:grid-cols-[1.1fr_0.9fr] md:overflow-hidden"
+            onClick={(event) => event.stopPropagation()}
           >
-            {/* Container for Image - Height fixed for mobile, auto for desktop */}
-            <div className="w-full md:w-1/2 bg-neutral-900 flex items-center justify-center">
+            <div className="flex min-h-[320px] items-center justify-center bg-gray-950">
               <img
                 src={activeImage.src}
                 alt={activeImage.title}
-                className="w-full h-auto max-h-[40vh] md:max-h-full md:h-full object-contain md:object-cover"
+                className="h-full max-h-[70vh] w-full object-contain md:object-cover"
               />
             </div>
 
-            {/* Container for Description */}
-            <div className="w-full md:w-1/2 bg-black flex flex-col justify-center p-6 md:p-12">
-              <h1 className="text-2xl md:text-4xl text-white font-bold mb-4">
+            <div className="flex flex-col justify-center p-6 md:p-10">
+              <p className="section-kicker">Work Snapshot</p>
+              <h1 className="mt-4 text-3xl font-extrabold leading-tight text-white md:text-5xl">
                 {activeImage.title}
               </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="mt-5 text-lg leading-8 text-gray-300">
                 {activeImage.description}
               </p>
             </div>
@@ -49,66 +50,99 @@ export default function Experience() {
         </div>
       )}
 
-      {/* Main Heading */}
-      <div className="max-w-6xl mx-auto mb-12">
-        <h1 className="text-5xl md:text-6xl text-black font-medium tracking-tight text-center">
-          Work Experience
-        </h1>
-      </div>
+      <div className="section-shell section-pad">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+          <div>
+            <p className="section-kicker">Experience</p>
+            <h1 className="section-title text-black">Work Experience</h1>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-gray-600 lg:ml-auto">
+            A timeline of roles across software testing, automation,
+            university outreach, customer service, coaching, and volunteering.
+          </p>
+        </div>
 
-      {/* Main Content box */}
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col gap-8">
-          {experiences.map((w) => (
-            <div
-              key={w.id}
-              className="p-8 bg-black border border-gray-500 rounded-lg hover:scale-[1.02] transition-all"
-            >
-              <div className="flex justify-between items-start mb-4">
-                <div>
-                  <h2 className="text-4xl font-bold text-white">{w.title}</h2>
-                  <p className="text-2xl text-blue-400 font-medium">
-                    {w.company}
-                  </p>
+        <div className="relative mt-14">
+          <div className="absolute left-4 top-0 hidden h-full w-px bg-gray-300 md:block" />
+
+          <div className="grid gap-8">
+            {experiences.map((work, index) => (
+              <article
+                key={work.id}
+                className="relative grid gap-5 md:grid-cols-[3rem_1fr]"
+              >
+                <div className="hidden md:block">
+                  <div className="relative z-10 grid h-8 w-8 place-items-center border-2 border-black bg-blue-400 text-sm font-extrabold text-black">
+                    {index + 1}
+                  </div>
                 </div>
-                <span className="text-neutral-400 text-xl font-medium font-sans">
-                  {w.date}
-                </span>
-              </div>
 
-              <ul className="list-disc ml-5 space-y-2 text-gray-300">
-                {w.description.map((b, index) => (
-                  <li key={index}>{b}</li>
-                ))}
-              </ul>
+                <div className="blueprint-card focus-lift p-6 text-white md:p-8">
+                  <div className="relative z-10">
+                    <div className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-start lg:justify-between">
+                      <div>
+                        <p className="text-sm font-bold uppercase tracking-[0.24em] text-blue-300">
+                          {work.company}
+                        </p>
+                        <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-5xl">
+                          {work.title}
+                        </h2>
+                      </div>
 
-              {/* IMAGES */}
-              {w.images && w.images.length > 0 && (
-                <div className="flex gap-6 overflow-x-auto py-8 px-5 snap-x snap-mandatory">
-                  {w.images.map((i, index) => (
-                    <div
-                      key={index}
-                      className="group relative flex-shrink-0 cursor-pointer"
-                      onClick={() => setOpenImage(index + 1)}
-                    >
-                      <img
-                        src={i}
-                        alt="Work highlight"
-                        className="h-48 w-72 object-cover rounded-lg border border-gray-700 transition-transform duration-300 group-hover:opacity-50 group-hover:brightness-125"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-100">
-                        <span className="text-white font-bold text-sm tracking-widest uppercase px-4 py-2 rounded-full">
-                          See More
+                      <div className="grid gap-3 text-sm font-semibold text-gray-400">
+                        <span className="inline-flex items-center gap-2">
+                          <Calendar size={16} className="text-blue-300" />
+                          {work.date}
                         </span>
+                        {work.location && (
+                          <span className="inline-flex items-center gap-2">
+                            <MapPin size={16} className="text-blue-300" />
+                            {work.location}
+                          </span>
+                        )}
                       </div>
                     </div>
-                  ))}
+
+                    <ul className="mt-6 grid gap-3 text-gray-300">
+                      {work.description.map((item) => (
+                        <li key={item} className="flex gap-3 leading-7">
+                          <span className="mt-3 h-2 w-2 shrink-0 bg-blue-400" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {work.images && work.images.length > 0 && (
+                      <div className="mt-8 flex gap-4 overflow-x-auto pb-2">
+                        {work.images.map((image, imageIndex) => (
+                          <button
+                            key={image}
+                            type="button"
+                            className="group relative h-44 w-64 shrink-0 overflow-hidden border border-white/10 bg-gray-950"
+                            onClick={() => setOpenImage(imageIndex + 1)}
+                          >
+                            <img
+                              src={image}
+                              alt={`${work.title} highlight ${imageIndex + 1}`}
+                              className="h-full w-full object-cover transition duration-500 group-hover:scale-105 group-hover:opacity-60"
+                            />
+                            <span className="absolute inset-0 grid place-items-center opacity-0 transition group-hover:opacity-100">
+                              <span className="inline-flex items-center gap-2 bg-white px-4 py-3 text-sm font-bold text-black">
+                                <ZoomIn size={16} />
+                                View
+                              </span>
+                            </span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </article>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,73 +1,84 @@
 import profileImg from "@/assets/profile1.png";
 import { Link } from "react-router-dom";
+import { ArrowRight, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-[50vh] flex items-center justify-center px-6 py-10">
-      {/* Main Container: 
-          - flex-col for mobile (stacked)
-          - md:flex-row for desktop (side-by-side)
-      */}
-      <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-        {/* Left Side: Writing Content */}
-        <div className="flex-1 text-center md:text-left">
-          {/* Name / Greeting */}
-          <h1 className="text-5xl md:text-6xl font-extrabold text-black tracking-tight">
-            Hi!, I'm{" "}
-            <span className="text-blue-400 hover:text-blue-300 transition-colors duration-300 cursor-default">
+    <section className="paper-grid border-b border-gray-200">
+      <div className="section-shell grid min-h-[calc(100vh-72px)] items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
+        <div>
+          <p className="section-kicker">Final Year Software Engineer</p>
+          <h1 className="section-title max-w-3xl text-black">
+            Hi, I'm{" "}
+            <span className="text-blue-500 transition-colors duration-300 hover:text-blue-400">
               Hemish Patel
             </span>
           </h1>
 
-          {/* Main Bio Section */}
-          <div className="mt-8 space-y-6 max-w-2xl">
-            <p className="text-2xl md:text-3xl font-medium text-gray-900 leading-tight">
+          <div className="mt-8 max-w-2xl space-y-6 border-l-2 border-black pl-5">
+            <p className="text-2xl font-semibold leading-tight text-gray-950 md:text-3xl">
               Final Year{" "}
-              <span className="text-blue-400">Software Engineering</span>{" "}
+              <span className="text-blue-500">Software Engineering</span>{" "}
               student at AUT, specializing in full-stack systems and{" "}
-              <span className="text-blue-400">interpretable AI</span>.
+              <span className="text-blue-500">interpretable AI</span>.
             </p>
 
-            <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
+            <p className="text-lg leading-8 text-gray-700 md:text-xl">
               Currently deep-diving into{" "}
-              <span className=" text-gray-400 hover:text-gray-700 border-b border-gray-800 pb-0.5">
+              <span className="border-b-2 border-blue-300 text-gray-950">
                 Machine Learning
               </span>{" "}
               and automated{" "}
-              <span className="text-gray-400 hover:text-gray-700 border-b border-gray-800 pb-0.5">
+              <span className="border-b-2 border-blue-300 text-gray-950">
                 Web Scraping
               </span>{" "}
               to create data-driven applications.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-5">
+          <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/projects"
-              className="px-8 py-4 bg-blue-500 text-white rounded-xl font-bold hover:bg-blue-600 hover:-translate-y-1 transition-all duration-200 shadow-lg shadow-blue-500/20"
+              className="focus-lift inline-flex items-center gap-2 bg-black px-6 py-4 font-bold text-white shadow-xl shadow-black/10 hover:bg-blue-500"
             >
               View Projects
+              <ArrowRight size={18} />
             </Link>
             <Link
               to="/contact"
-              className="px-8 py-4 bg-black text-gray-200 rounded-xl font-bold hover:bg-gray-900 hover:-translate-y-1 transition-all duration-200 shadow-lg shadow-black/20"
+              className="focus-lift inline-flex items-center gap-2 border border-black bg-white px-6 py-4 font-bold text-black hover:border-blue-500 hover:text-blue-500"
             >
               Get in Touch
+              <Mail size={18} />
             </Link>
+          </div>
+
+          <div className="mt-12 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
+            {["React", "Node.js", "Automation"].map((item) => (
+              <div
+                key={item}
+                className="border border-gray-300 bg-white/80 px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] text-gray-700"
+              >
+                {item}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Side: Image */}
-        <div className="flex-1 flex justify-center md:justify-end">
-          <div className="relative">
+        <div className="relative mx-auto w-full max-w-[430px]">
+          <div className="absolute -left-5 top-8 hidden h-full w-full border-2 border-black md:block" />
+          <div className="relative border-2 border-black bg-white p-3 shadow-2xl shadow-gray-300/70">
             <img
               src={profileImg}
               alt="Hemish"
-              className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl hover:scale-[1.22] shadow-2xl transition-all duration-500"
+              className="aspect-[4/5] w-full object-cover grayscale transition duration-500 hover:grayscale-0"
             />
-            {/* Decorative background accent */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-300 -z-10 rounded-full"></div>
+            <div className="absolute -right-4 bottom-8 border-2 border-black bg-blue-400 px-5 py-4 text-black shadow-xl">
+              <p className="text-xs font-bold uppercase tracking-[0.2em]">
+                Auckland
+              </p>
+              <p className="text-2xl font-extrabold">NZ</p>
+            </div>
           </div>
         </div>
       </div>

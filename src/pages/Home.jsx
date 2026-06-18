@@ -6,8 +6,9 @@ import Touch from "@/components/sections/Touch";
 
 export default function Home() {
   return (
-    <main className="space-y-16">
+    <main className="bg-slate-50">
       <Hero />
+      <Value />
       <FeaturedProjects />
       <Skills />
       <Touch />

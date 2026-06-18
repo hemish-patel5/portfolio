@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Roboto Condensed', 'sans-serif'],
+        sans: ['Titillium Web', 'sans-serif'],
       },
     },
   },

@@ -1,65 +1,69 @@
 import { Link } from "react-router-dom";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
-import GithubIcon from "@/assets/github.svg";
 
 export default function Projects() {
   return (
-    <section className="py-10 px-6 bg-gray-950 min-h-screen">
-      <div className="max-w-3xl mx-auto mb-16 text-center">
-        <h1 className="text-5xl md:text-6xl text-white font-medium tracking-tight">
-          Projects
-        </h1>
-      </div>
+    <section className="paper-grid min-h-screen">
+      <div className="section-shell section-pad">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="section-kicker">Project Archive</p>
+            <h1 className="section-title text-black">Projects</h1>
+          </div>
+          <p className="max-w-2xl text-lg leading-8 text-gray-600 lg:ml-auto">
+            A collection of practical web applications focused on searching,
+            booking, storing, and presenting user-driven information.
+          </p>
+        </div>
 
-      <div className="max-w-3xl mx-auto">
-        <div className="flex flex-col gap-10">
-          {projects.map((p) => (
-            <div
-              key={p.id}
-              className=" hover:scale- [1.02] flex flex-col md:flex-row items-stretch bg-gray-100 hover:border-blue-300 border-2 border-transparent rounded-xl relative z-0 hover:z-50 transition-all duration-300"
+        <div className="mt-14 grid gap-8">
+          {projects.map((project, index) => (
+            <article
+              key={project.id}
+              className="blueprint-card focus-lift group grid text-white md:grid-cols-[1fr_0.9fr]"
             >
-              {/* LEFT SIDE: TEXT CONTENT */}
-              <div className="flex-1 p-8 flex flex-col justify-center rounded-l-xl">
-                {/*<Link to={`/projects/${p.id}`}> --- potential link */}
-                <h2 className="text-3xl font-bold text-gray-900 mb-4 hover:text-blue-700 transition-colors">
-                  {p.title}
-                </h2>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  {p.description}
-                </p>
+              <div className="flex flex-col justify-between p-6 md:p-9">
+                <div>
+                  <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-blue-300">
+                    0{index + 1} / Project
+                  </p>
+                  <h2 className="mt-6 text-4xl font-extrabold leading-none text-white md:text-5xl">
+                    {project.title}
+                  </h2>
+                  <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-300">
+                    {project.description}
+                  </p>
+                </div>
 
-                <div className="mt-6">
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    to={`/projects/${project.id}`}
+                    className="focus-lift inline-flex items-center gap-2 bg-blue-400 px-5 py-3 font-bold text-black hover:bg-white"
+                  >
+                    View Details
+                    <ArrowUpRight size={18} />
+                  </Link>
                   <a
-                    href={p.github}
+                    href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-gray-900 font-bold hover:text-black transition-transform duration-300 hover:scale-105 origin-left"
+                    className="focus-lift inline-flex items-center gap-2 border border-white/20 px-5 py-3 font-bold text-white hover:border-blue-300 hover:text-blue-300"
                   >
-                    <img
-                      src={GithubIcon}
-                      alt="GitHub logo"
-                      className="w-6 h-7"
-                    />
-                    View on GitHub
+                    <ExternalLink size={18} />
+                    GitHub
                   </a>
                 </div>
               </div>
 
-              {/* RIGHT SIDE: IMAGE POP-OUT */}
-              <div className="md:w-72 lg:w-80 h-64 md:h-auto relative rounded-r-xl overflow-visible">
+              <div className="relative z-10 flex items-center justify-center border-t border-white/10 bg-white p-6 md:border-l md:border-t-0">
                 <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-contain rounded-xl 
-                             transition-all duration-400 ease-in-out
-                             hover:scale-130 
-                             hover:z-50 
-                             hover:relative 
-                             hover:-translate-x-10
-                             hover:origin-center"
+                  src={project.image}
+                  alt={project.title}
+                  className="max-h-80 w-full object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
