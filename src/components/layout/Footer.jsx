@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-sm text-gray-500">
+        <div className="mt-10 flex flex-wrap items-center justify-between gap-4  pt-6 text-sm text-gray-300">
           <p>&copy; {new Date().getFullYear()} Hemish Patel.</p>
           <p>Auckland, New Zealand</p>
         </div>

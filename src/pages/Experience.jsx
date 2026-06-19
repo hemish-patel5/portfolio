@@ -51,15 +51,11 @@ export default function Experience() {
       )}
 
       <div className="section-shell section-pad">
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+        <div className="grid gap-8 ">
           <div>
             <p className="section-kicker">Experience</p>
             <h1 className="section-title text-black">Work Experience</h1>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-gray-600 lg:ml-auto">
-            A timeline of roles across software testing, automation,
-            university outreach, customer service, coaching, and volunteering.
-          </p>
         </div>
 
         <div className="relative mt-14">
@@ -81,7 +77,7 @@ export default function Experience() {
                   <div className="relative z-10">
                     <div className="flex flex-col gap-6 border-b border-white/10 pb-6 lg:flex-row lg:items-start lg:justify-between">
                       <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.24em] text-blue-300">
+                        <p className="text-sm font-bold uppercase tracking-[0.24em] text-black">
                           {work.company}
                         </p>
                         <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-5xl">
@@ -89,14 +85,14 @@ export default function Experience() {
                         </h2>
                       </div>
 
-                      <div className="grid gap-3 text-sm font-semibold text-gray-400">
+                      <div className="grid gap-3 text-sm font-semibold text-blue-200">
                         <span className="inline-flex items-center gap-2">
-                          <Calendar size={16} className="text-blue-300" />
+                          <Calendar size={16} className="text-blue-200" />
                           {work.date}
                         </span>
                         {work.location && (
                           <span className="inline-flex items-center gap-2">
-                            <MapPin size={16} className="text-blue-300" />
+                            <MapPin size={16} className="text-blue-200" />
                             {work.location}
                           </span>
                         )}
@@ -106,7 +102,7 @@ export default function Experience() {
                     <ul className="mt-6 grid gap-3 text-gray-300">
                       {work.description.map((item) => (
                         <li key={item} className="flex gap-3 leading-7">
-                          <span className="mt-3 h-2 w-2 shrink-0 bg-blue-400" />
+                          <span className="mt-3 h-2 w-2 shrink-0 bg-white" />
                           <span>{item}</span>
                         </li>
                       ))}

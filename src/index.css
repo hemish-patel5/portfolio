@@ -52,10 +52,10 @@
   }
 
   .dark-grid {
-    background-color: #020617;
+    background-color: #000000;
     background-image:
-      linear-gradient(rgba(148, 163, 184, 0.11) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(148, 163, 184, 0.11) 1px, transparent 1px);
+      linear-gradient(rgba(255, 255, 255, 0.11) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.11) 1px, transparent 1px);
     background-size: 58px 58px;
   }
 
@@ -88,8 +88,8 @@
   .blueprint-card {
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(148, 163, 184, 0.25);
-    background: #020617;
+    /*border: 1px solid rgba(148, 163, 184, 0.25);*/
+    background: #60a5fa;
     box-shadow: 0 24px 80px rgba(2, 6, 23, 0.22);
   }
 
@@ -120,7 +120,7 @@
     vertical-align: bottom;
     border-right: 0.08em solid #3b82f6;
     animation:
-      typing-name 4s steps(20) infinite, blink, .6s, infinite
+      typing-name 3s steps(20) infinite, blink, .6s, infinite
   }
 }
 
