@@ -111,4 +111,26 @@
   .focus-lift:hover {
     transform: translateY(-4px);
   }
+
+  .typing-name {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    border-right: 0.08em solid #3b82f6;
+    animation:
+      typing-name 4s steps(20) infinite, blink, .6s, infinite
+  }
 }
+
+@keyframes typing-name {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 11ch;
+  }
+}
+

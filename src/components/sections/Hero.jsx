@@ -9,8 +9,9 @@ export default function Hero() {
         <div>
           <p className="section-kicker">Final Year Software Engineer</p>
           <h1 className="section-title max-w-3xl text-black">
-            Hi, I'm{" "}
-            <span className="text-blue-500 transition-colors duration-300 hover:text-blue-400">
+            Hi, I'm
+            <br />
+            <span className="typing-name text-blue-500 transition-colors duration-300 hover:text-blue-400">
               Hemish Patel
             </span>
           </h1>
@@ -51,17 +52,6 @@ export default function Hero() {
               Get in Touch
               <Mail size={18} />
             </Link>
-          </div>
-
-          <div className="mt-12 grid max-w-xl grid-cols-2 gap-3 sm:grid-cols-3">
-            {["React", "Node.js", "Automation"].map((item) => (
-              <div
-                key={item}
-                className="border border-gray-300 bg-white/80 px-4 py-3 text-sm font-bold uppercase tracking-[0.16em] text-gray-700"
-              >
-                {item}
-              </div>
-            ))}
           </div>
         </div>
 
