@@ -26,14 +26,15 @@ export default function SkillsPreview() {
           {skills.map((url, index) => (
             <div
               key={index}
-              className="paper-card focus-lift group flex min-h-36 flex-col items-center justify-center gap-4 p-5 text-center"
+              className="focus-lift group flex min-h-36 items-center justify-center p-2 text-center"
             >
-              <img
-                src={url}
-                alt={`${getSkillName(url)} logo`}
-                className="h-16 w-16 object-contain transition duration-300"
-              />
-
+              <div className="liquid-glass">
+                <img
+                  src={url}
+                  alt={`${getSkillName(url)} logo`}
+                  className="liquid-glass__icon"
+                />
+              </div>
             </div>
           ))}
         </div>
