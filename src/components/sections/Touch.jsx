@@ -5,7 +5,7 @@ export default function CTA() {
   return (
     <section className="bg-white py-16">
       <div className="section-shell">
-        <div className="grid gap-8 border-y-2 border-black py-10 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="grid gap-8 py-10 md:grid-cols-[1fr_auto] md:items-center">
           <div>
             <p className="section-kicker">Next Step</p>
             <h2 className="mt-3 text-4xl font-extrabold leading-none text-black md:text-5xl">

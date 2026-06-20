@@ -20,7 +20,7 @@ export default function Hero() {
 
           <div className="mt-8 max-w-2xl space-y-6 border-l-2 border-black pl-5">
             <p className="text-2xl font-semibold leading-tight text-gray-950 md:text-3xl">
-              Final Year{" "}
+              I'm a Final Year{" "}
               <span className="text-blue-500">Software Engineering</span>{" "}
               student at AUT, specializing in full-stack systems and{" "}
               <span className="text-blue-500">interpretable AI</span>.

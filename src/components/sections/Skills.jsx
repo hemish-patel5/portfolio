@@ -31,7 +31,7 @@ export default function SkillsPreview() {
               <img
                 src={url}
                 alt={`${getSkillName(url)} logo`}
-                className="h-16 w-16 object-contain grayscale transition duration-300 group-hover:grayscale-0"
+                className="h-16 w-16 object-contain transition duration-300"
               />
 
             </div>

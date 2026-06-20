@@ -99,7 +99,7 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <ul className="mt-6 grid gap-3 text-gray-300">
+                    <ul className="mt-6 grid gap-3 text-gray-100">
                       {work.description.map((item) => (
                         <li key={item} className="flex gap-3 leading-7">
                           <span className="mt-3 h-2 w-2 shrink-0 bg-white" />

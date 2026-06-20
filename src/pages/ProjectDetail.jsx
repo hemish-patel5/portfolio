@@ -31,7 +31,7 @@ export default function ProjectDetail() {
       <div className="section-shell section-pad">
         <Link
           to="/projects"
-          className="focus-lift inline-flex items-center gap-2 border border-black bg-white px-4 py-3 font-bold text-black hover:border-blue-500 hover:text-blue-500"
+          className="focus-lift inline-flex items-center gap-2 border border-black bg-blue-400 px-4 py-3 font-bold text-black hover:text-gray-700"
         >
           <ArrowLeft size={18} />
           Back to Projects

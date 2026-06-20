@@ -27,7 +27,7 @@ export default function Projects() {
                   <h2 className="mt-6 text-4xl font-extrabold leading-none text-white md:text-5xl">
                     {project.title}
                   </h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-300">
+                  <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-100">
                     {project.description}
                   </p>
                 </div>
@@ -35,7 +35,7 @@ export default function Projects() {
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
                     to={`/projects/${project.id}`}
-                    className="focus-lift inline-flex items-center gap-2 bg-gray-200 px-5 py-3 font-bold text-black hover:bg-white"
+                    className="focus-lift inline-flex items-center gap-2 bg-gray-100 px-5 py-3 font-bold text-black hover:bg-white"
                   >
                     View Details
                     <ArrowUpRight size={18} />
@@ -44,7 +44,7 @@ export default function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-lift inline-flex items-center gap-2 border border-white/20 px-5 py-3 font-bold text-white hover:border-blue-300"
+                    className="focus-lift inline-flex items-center gap-2 border bg-black border-white/20 px-5 py-3 font-bold text-white hover:border-blue-300"
                   >
                     <ExternalLink size={18} />
                     GitHub

@@ -39,7 +39,7 @@ export default function Contact() {
                     href="https://github.com/hemish-patel5"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-lift inline-flex items-center justify-center gap-3 border border-white/15 bg-white px-5 py-4 font-bold text-black hover:border-blue-300 hover:bg-blue-400"
+                    className="focus-lift inline-flex items-center justify-center gap-3 border border-white/15 bg-white px-5 py-4 font-bold text-black hover:bg-gray-300"
                   >
                     <img
                       src={GithubIcon}
@@ -52,7 +52,7 @@ export default function Contact() {
                     href="https://linkedin.com/in/hemish--patel"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-lift inline-flex items-center justify-center gap-3 border border-white/15 bg-white px-5 py-4 font-bold text-black hover:border-blue-300 hover:bg-blue-400"
+                    className="focus-lift inline-flex items-center justify-center gap-3 border border-white/15 bg-white px-5 py-4 font-bold text-black hover:bg-gray-300"
                   >
                     <img
                       src={LinkedInIcon}

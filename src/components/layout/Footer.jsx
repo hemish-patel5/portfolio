@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="dark-grid border-t border-white/10 text-white">
       <div className="section-shell py-10">
-        <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr_1fr] md:items-start">
+        <div className="grid gap-8 md:grid-cols-[0.8fr_0.2fr_1fr] md:items-start">
           <div>
             <p className="section-kicker">Portfolio</p>
             <h2 className="mt-3 text-3xl font-extrabold">Hemish Patel</h2>
@@ -42,7 +42,7 @@ export default function Footer() {
               Open To Work
             </p>
             <p className="mt-3 text-lg font-bold leading-snug">
-              Graduate software engineering and internship opportunities.
+              Graduate Software Engineering and Internship Opportunities.
             </p>
             <Link
               to="/contact"
