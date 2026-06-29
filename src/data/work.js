@@ -19,6 +19,7 @@ export const experiences = [
       new URL("../assets/3.webp", import.meta.url).href,
       new URL("../assets/5.webp", import.meta.url).href,
     ],
+    logo: new URL("../assets/otto.jpg", import.meta.url).href,
   },
   {
     id: "ambassador",
@@ -31,6 +32,7 @@ export const experiences = [
     ],
     date: "January 2026 - Present",
     images: [],
+    logo: new URL("../assets/aut.jpg", import.meta.url).href,
   },
   {
     id: "cashier",
@@ -43,6 +45,7 @@ export const experiences = [
       "Collaborated with team members to maintain smooth checkout operations, ensuring a positive customer experience and reduced wait times",
     ],
     date: "May 2022 - Present",
+    logo: new URL("../assets/woolies.png", import.meta.url).href,
   },
   {
     id: "football-coach-1",
@@ -54,6 +57,7 @@ export const experiences = [
       "Developed teamwork, communication, and fundamental skills in a safe, positive environment",
     ],
     date: "December 2024 - March 2026",
+    logo: new URL("../assets/littlekick.jpeg", import.meta.url).href,
   },
   {
     id: "volunteer",
@@ -65,6 +69,7 @@ export const experiences = [
       "Developed strong communication and interpersonal skills while interacting with a wide range of people",
     ],
     date: "2018",
+    logo: new URL("../assets/wish.png", import.meta.url).href,
   },
 ];
 

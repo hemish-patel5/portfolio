@@ -83,20 +83,24 @@ export default function Experience() {
                         <h2 className="mt-3 text-3xl font-extrabold leading-tight md:text-5xl">
                           {work.title}
                         </h2>
-                      </div>
-
-                      <div className="grid gap-3 text-sm font-semibold text-blue-200">
-                        <span className="inline-flex items-center gap-2">
-                          <Calendar size={16} className="text-blue-200" />
-                          {work.date}
-                        </span>
-                        {work.location && (
+                        <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-blue-200">
                           <span className="inline-flex items-center gap-2">
-                            <MapPin size={16} className="text-blue-200" />
-                            {work.location}
+                            <Calendar size={16} className="text-blue-200" />
+                            {work.date}
                           </span>
-                        )}
+                          {work.location && (
+                            <span className="inline-flex items-center gap-2">
+                              <MapPin size={16} className="text-blue-200" />
+                              {work.location}
+                            </span>
+                          )}
+                        </div>
                       </div>
+                      <img
+                        src={work.logo}
+                        alt={`${work.company} logo`}
+                        className="h-25 w-auto max-w-40 self-end object-contain lg:self-start"
+                      />
                     </div>
 
                     <ul className="mt-6 grid gap-3 text-gray-100">
