@@ -5,8 +5,8 @@ export const experiences = [
     company: "OTTOMAT3D",
     location: "Auckland",
     description: [
-      "Designed and executed structured test cases for the OttoEngine platform, systematically logging results in spreadsheets and identifying bugs across end-to-end automated workflows",
-      "Calibrated and tested an automated 3D printing system (Prusa CORE One & OttoEject), supporting reliable multi-job execution without manual intervention",
+      "Designed and executed structured test cases for a 3D printing automation software, systematically logging results in spreadsheets and identifying bugs across end-to-end automated workflows",
+      "Calibrated and tested an automated 3D print eject system , supporting reliable multi-job execution without manual intervention",
       "Debugged and resolved system-level issues across software and hardware layers, improving reliability of API-driven automation processes",
       "Worked with a full-stack system using React and Node.js, interacting with REST APIs and validating backend to frontend communication",
       "Configured and integrated embedded systems (Raspberry Pi and SKR board), ensuring stable communication between hardware components and software services",
