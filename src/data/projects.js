@@ -7,6 +7,7 @@ export const projects = [
     details:
       "Built with React, Python, Flask, REST APIs, and Tailwind CSS, the website combines API and web-scraped product data from major New Zealand supermarkets. It provides a responsive search and comparison interface, normalises data from multiple sources, and handles timeouts or unavailable results gracefully.",
     image: new URL("../assets/grocery.png", import.meta.url).href,
+    skills: ["React", "Python", "Flask", "Tailwind CSS"],
     github: "https://github.com/hemish-patel5/Grocery-Price-Comparison-",
     link: "https://grocery-price-comparison-delta.vercel.app/",
   },
@@ -18,6 +19,7 @@ export const projects = [
     details:
       "This project involved building a Wi-Fi controlled robot car using an ESP32 microcontroller, DC motors, a motor driver, and a custom web interface. The ESP32 hosts a local web server that allows users to control the car’s movement, including moving forward, reversing, turning left or right, and stopping. The project strengthened my skills in embedded programming, hardware integration, networking, and real-time device control.",
     image: new URL("../assets/robo_car.png", import.meta.url).href,
+    skills: ["C++", "React", "JavaScript", "HTML5"],
     github: "https://github.com/hemish-patel5/Wifi-Robot-Car",
     // link: "",
   },
@@ -29,6 +31,7 @@ export const projects = [
     details:
       "This project investigates how handcrafted feature extraction methods can be combined with an explainable Learning Classifier System (eLCS) to classify skin lesions as benign or malignant. Features such as asymmetry, border irregularity, colour variation, texture, and lesion shape are extracted from dermoscopic images and evaluated using feature-selection and dimensionality-reduction techniques. Unlike black-box deep learning models, eLCS produces human-readable IF-THEN rules that can help explain the reasoning behind each prediction.",
     image: new URL("../assets/cancer.png", import.meta.url).href,
+    skills: ["Python", "React", "JavaScript"],
     github:
       "https://github.com/hemish-patel5/interpretable-skin-cancer-detection",
     // link: "",
@@ -39,6 +42,7 @@ export const projects = [
     description:
       "An IoT system that monitors room occupancy and environmental conditions to estimate queue lengths and waiting times in real time.",
     image: new URL("../assets/iot.png", import.meta.url).href,
+    skills: ["Python", "React", "JavaScript"],
     github: "https://github.com/hemish-patel5/Queue-Predictor-IoT",
     link: "https://queue-predictor-iot.vercel.app/",
   },
@@ -48,6 +52,7 @@ export const projects = [
     description:
       "A multiplayer trivia web application where users can join live quiz sessions, answer questions, and compete against other players in real time.",
     image: new URL("../assets/trivia.png", import.meta.url).href,
+    skills: ["React", "JavaScript", "Tailwind CSS"],
     github: "https://github.com/rafaelmarcoo/trivia-on-tap",
     link: "https://trivia-on-tap.vercel.app/",
   },

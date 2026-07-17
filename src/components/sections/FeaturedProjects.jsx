@@ -3,14 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
 
 export default function FeaturedProjects() {
-  const featured = projects.slice(0, 6);
+  const featured = projects.slice(0, 3);
 
   return (
     <section className="bg-white section-pad text-white">
       <div className="section-shell">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="section-kicker">Selected Work</p>
             <h2 className="mt-3 text-4xl text-black font-extrabold leading-none md:text-6xl">
               Featured Projects
             </h2>
@@ -31,29 +30,6 @@ export default function FeaturedProjects() {
               className="blueprint-card group grid min-h-[460px] content-between p-6"
             >
               <div className="relative z-10">
-                <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  {/* <span className="text-sm font-bold uppercase tracking-[0.24em] text-white">
-                    Featured
-                  </span> */}
-                  <div className="flex items-center gap-2">
-                    <a
-                      href={p.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
-                    >
-                      Try Me
-                    </a>
-                    <a
-                      href={p.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="focus-lift border border-white/20 bg-black px-3 py-2 text-xs font-bold text-white hover:border-blue-300"
-                    >
-                      View Details
-                    </a>
-                  </div>
-                </div>
                 <h3 className="mt-8 text-center text-3xl font-extrabold leading-tight text-white">
                   {p.title}
                 </h3>
@@ -68,6 +44,25 @@ export default function FeaturedProjects() {
                   alt={p.title}
                   className="h-44 w-full object-contain transition duration-500 group-hover:scale-105"
                 />
+              </div>
+
+              <div className="relative z-10 mt-4 flex items-center justify-center gap-2 border-t border-white/10 pt-4">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
+                >
+                  Try Me
+                </a>
+                <a
+                  href={p.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="focus-lift border border-white/20 bg-black px-3 py-2 text-xs font-bold text-white hover:border-blue-300"
+                >
+                  View Details
+                </a>
               </div>
             </article>
           ))}

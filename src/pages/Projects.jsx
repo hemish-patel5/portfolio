@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
+import { skillIcons } from "@/data/skills";
 
 export default function Projects() {
   return (
@@ -16,7 +17,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="blueprint-card focus-lift group grid min-h-[450px] text-white md:grid-cols-[1fr_0.9fr]"
+              className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[1fr_0.9fr]"
             >
               <div className="flex flex-col justify-between p-6 md:p-9">
                 <div>
@@ -26,6 +27,26 @@ export default function Projects() {
                   <p className="mt-5 max-w-2xl text-lg leading-6 text-gray-100">
                     {project.description}
                   </p>
+                  <div
+                    className="mt-6 justify-left grid grid-flow-col auto-cols-fr "
+                    aria-label="Technologies used"
+                  >
+                    {project.skills?.map((skill) => (
+                      <div
+                        key={skill}
+                        className="focus-lift group flex min-h-28 items-center justify-center p-1 text-center"
+                        title={skill}
+                      >
+                        <div className="liquid-glass h-28 max-w-28 p-3">
+                          <img
+                            src={skillIcons[skill]}
+                            alt={`${skill} logo`}
+                            className="liquid-glass__icon"
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
@@ -54,7 +75,7 @@ export default function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="max-h-80 w-full object-contain transition duration-500 group-hover:scale-105"
+                  className="max-h-80 w-full object-contain transition duration-500 group-hover/card:scale-105"
                 />
               </div>
             </article>
