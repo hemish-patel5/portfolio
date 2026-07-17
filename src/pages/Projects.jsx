@@ -8,7 +8,6 @@ export default function Projects() {
       <div className="section-shell section-pad">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
-            <p className="section-kicker">Project Archive</p>
             <h1 className="section-title text-black">Projects</h1>
           </div>
         </div>
@@ -17,37 +16,36 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="blueprint-card focus-lift group grid text-white md:grid-cols-[1fr_0.9fr]"
+              className="blueprint-card focus-lift group grid min-h-[450px] text-white md:grid-cols-[1fr_0.9fr]"
             >
               <div className="flex flex-col justify-between p-6 md:p-9">
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-[0.24em] text-blue-200">
-                    0{index + 1} / Project
-                  </p>
                   <h2 className="mt-6 text-4xl font-extrabold leading-none text-white md:text-5xl">
                     {project.title}
                   </h2>
-                  <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-100">
+                  <p className="mt-5 max-w-2xl text-lg leading-6 text-gray-100">
                     {project.description}
                   </p>
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    to={`/projects/${project.id}`}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="focus-lift inline-flex items-center gap-2 bg-gray-100 px-5 py-3 font-bold text-black hover:bg-white"
                   >
-                    View Details
-                    <ArrowUpRight size={18} />
-                  </Link>
+                    {/* <ExternalLink size={18} /> */}
+                    Try Me
+                  </a>
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="focus-lift inline-flex items-center gap-2 border bg-black border-white/20 px-5 py-3 font-bold text-white hover:border-blue-300"
                   >
-                    <ExternalLink size={18} />
-                    GitHub
+                    {/* <ExternalLink size={18} /> */}
+                    View Details
                   </a>
                 </div>
               </div>

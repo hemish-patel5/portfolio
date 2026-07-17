@@ -26,25 +26,40 @@ export default function FeaturedProjects() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           {featured.map((p) => (
-            <Link
+            <article
               key={p.id}
-              to={`/projects/${p.id}`}
-              className="blueprint-card focus-lift group grid min-h-[460px] content-between p-6"
+              className="blueprint-card group grid min-h-[460px] content-between p-6"
             >
               <div className="relative z-10">
                 <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                  <span className="text-sm font-bold uppercase tracking-[0.24em] text-white">
-                    Project
-                  </span>
-                  <ArrowUpRight
-                    size={22}
-                    className="text-gray-700 transition group-hover:text-blue-300"
-                  />
+                  {/* <span className="text-sm font-bold uppercase tracking-[0.24em] text-white">
+                    Featured
+                  </span> */}
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
+                    >
+                      Try Me
+                    </a>
+                    <a
+                      href={p.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="focus-lift border border-white/20 bg-black px-3 py-2 text-xs font-bold text-white hover:border-blue-300"
+                    >
+                      View Details
+                    </a>
+                  </div>
                 </div>
-                <h3 className="mt-8 text-3xl font-extrabold leading-tight text-white">
+                <h3 className="mt-8 text-center text-3xl font-extrabold leading-tight text-white">
                   {p.title}
                 </h3>
-                <p className="mt-4 leading-7 text-gray-300">{p.description}</p>
+                <p className="mt-4 leading-6 text-center text-gray-300">
+                  {p.description}
+                </p>
               </div>
 
               <div className="relative z-10 mt-8 overflow-hidden border border-white/10 bg-white p-3">
@@ -54,7 +69,7 @@ export default function FeaturedProjects() {
                   className="h-44 w-full object-contain transition duration-500 group-hover:scale-105"
                 />
               </div>
-            </Link>
+            </article>
           ))}
         </div>
       </div>

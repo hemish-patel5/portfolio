@@ -15,7 +15,6 @@ export default function Contact() {
     <section className="paper-grid min-h-screen">
       <div className="section-shell section-pad">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="section-kicker">Get In Touch</p>
           <h1 className="section-title text-black">Contact Me</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
             Open to graduate software engineering roles, internships, and

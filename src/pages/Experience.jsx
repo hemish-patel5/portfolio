@@ -53,7 +53,6 @@ export default function Experience() {
       <div className="section-shell section-pad">
         <div className="grid gap-8 ">
           <div>
-            <p className="section-kicker">Experience</p>
             <h1 className="section-title text-black">Work Experience</h1>
           </div>
         </div>
