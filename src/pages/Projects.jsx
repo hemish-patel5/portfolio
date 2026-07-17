@@ -17,9 +17,9 @@ export default function Projects() {
           {projects.map((project, index) => (
             <article
               key={project.id}
-              className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[1fr_0.9fr]"
+              className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
             >
-              <div className="flex flex-col justify-between p-6 md:p-9">
+              <div className="min-w-0 flex flex-col justify-between p-6 md:p-9">
                 <div>
                   <h2 className="mt-6 text-4xl font-extrabold leading-none text-white md:text-5xl">
                     {project.title}
@@ -28,16 +28,16 @@ export default function Projects() {
                     {project.description}
                   </p>
                   <div
-                    className="mt-6 justify-left grid grid-flow-col auto-cols-fr "
+                    className="mt-6 flex flex-nowrap items-center justify-center gap-3"
                     aria-label="Technologies used"
                   >
                     {project.skills?.map((skill) => (
                       <div
                         key={skill}
-                        className="focus-lift group flex min-h-28 items-center justify-center p-1 text-center"
+                        className="focus-lift group flex min-h-24 items-center justify-center text-center"
                         title={skill}
                       >
-                        <div className="liquid-glass h-28 max-w-28 p-3">
+                        <div className="liquid-glass liquid-glass--project bg-white">
                           <img
                             src={skillIcons[skill]}
                             alt={`${skill} logo`}
@@ -71,7 +71,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex items-center justify-center border-t border-white/10 bg-white p-6 md:border-l md:border-t-0">
+              <div className="relative z-10 flex min-w-0 items-center justify-center border-t border-white/10 bg-white p-6 md:border-l md:border-t-0">
                 <img
                   src={project.image}
                   alt={project.title}

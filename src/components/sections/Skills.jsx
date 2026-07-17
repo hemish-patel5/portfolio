@@ -11,7 +11,6 @@ export default function SkillsPreview() {
       <div className="section-shell">
         <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>
-            <p className="section-kicker">Toolbox</p>
             <h2 className="mt-3 text-4xl font-extrabold leading-none text-black md:text-6xl">
               Skills
             </h2>
