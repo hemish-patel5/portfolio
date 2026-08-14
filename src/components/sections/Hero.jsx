@@ -63,7 +63,7 @@ export default function Hero() {
             <img
               src={profileImg}
               alt="Hemish"
-              className="aspect-[4/5] w-full object-cover grayscale transition duration-500 hover:grayscale-0"
+              className="aspect-[4/5] w-full object-cover"
             />
             <div className="absolute -right-4 bottom-8 border-2 border-black bg-blue-400 px-5 py-4 text-black shadow-xl">
               <p className="text-xs font-bold uppercase tracking-[0.2em]">
