@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="section-shell py-10">
         <div className="grid gap-8 md:grid-cols-[0.8fr_0.2fr_1fr] md:items-start">
           <div>
-            <p className="section-kicker">Portfolio</p>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-300">Portfolio</p>
             <h2 className="mt-3 text-3xl font-extrabold">Hemish Patel</h2>
             <p className="mt-2 max-w-sm text-sm leading-6 text-gray-400">
               Software Engineering student building full-stack systems,

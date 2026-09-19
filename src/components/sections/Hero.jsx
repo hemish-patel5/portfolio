@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="paper-grid border-b border-gray-200">
       <div className="section-shell grid min-h-[calc(100vh-72px)] items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="section-kicker">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-300">
             Final Year Software Engineering Student
           </p>
           <h1 className="section-title max-w-3xl text-black">
