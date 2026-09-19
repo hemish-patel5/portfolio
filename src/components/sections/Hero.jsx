@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="paper-grid border-b border-gray-200">
       <div className="section-shell grid min-h-[calc(100vh-72px)] items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-300">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-400">
             Final Year Software Engineering Student
           </p>
           <h1 className="section-title max-w-3xl text-black">
@@ -18,24 +18,18 @@ export default function Hero() {
             </span>
           </h1>
 
-          <div className="mt-8 max-w-2xl space-y-6 border-l-2 border-black pl-5">
+          <div className="mt-8 max-w-2xl space-y-5 border-l-2 border-black pl-5">
             <p className="text-2xl font-semibold leading-tight text-gray-950 md:text-3xl">
               I'm a Final Year{" "}
               <span className="text-blue-500">Software Engineering</span>{" "}
-              student at AUT, specializing in full-stack systems and{" "}
-              <span className="text-blue-500">interpretable AI</span>.
-            </p>
-
-            <p className="text-lg leading-8 text-gray-700 md:text-xl">
-              Currently deep-diving into{" "}
-              <span className="border-b-2 border-blue-300 text-gray-950">
-                Machine Learning
-              </span>{" "}
-              and automated{" "}
-              <span className="border-b-2 border-blue-300 text-gray-950">
-                Web Scraping
-              </span>{" "}
-              to create data-driven applications.
+              student at AUT, focusing on{" "}
+              <span className="text-blue-500">Full-Stack</span>,
+              {" "}
+              <span className="whitespace-nowrap">
+                <span className="text-blue-500">Embedded Systems</span> and{" "}
+                <span className="text-blue-500">Machine Learning</span>
+              </span>
+              .
             </p>
           </div>
 

@@ -15,10 +15,7 @@ export default function SkillsPreview() {
               Skills
             </h2>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-gray-600 md:ml-auto">
-            A practical stack for building frontends, backend services,
-            automation tools, and database-backed applications.
-          </p>
+
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">

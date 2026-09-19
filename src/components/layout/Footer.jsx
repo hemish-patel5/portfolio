@@ -17,9 +17,6 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-gray-500">
-              Navigation
-            </p>
             <div className="mt-4 grid gap-2">
               {navlinks.map((link) => (
                 <Link

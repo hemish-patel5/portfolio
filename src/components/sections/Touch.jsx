@@ -11,8 +11,7 @@ export default function CTA() {
           </h2>
 
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-600">
-            I'm currently looking for Graduate Software Engineering
-            opportunities.
+
           </p>
           <Link
             to="/contact"
