@@ -26,13 +26,13 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap gap-4 lg:mt-10 lg:gap-5">
               <Link
                 to="/projects"
-                className="rounded-[1.25rem] border-2 border-black bg-white px-6 py-3 text-lg font-bold text-black shadow-[5px_6px_0_#111827] transition duration-150 ease-out hover:translate-x-[3px] hover:translate-y-[4px] hover:scale-[0.98] hover:text-blue-500 hover:shadow-[2px_2px_0_#111827] active:translate-x-[5px] active:translate-y-[6px] active:scale-[0.96] active:shadow-none lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
+                className="press-button bg-white px-6 py-3 text-lg font-bold text-black hover:text-blue-500 lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
               >
                 View Projects
               </Link>
               <Link
                 to="/contact"
-                className="rounded-[1.25rem] border-2 border-black bg-white px-6 py-3 text-lg font-bold text-black shadow-[5px_6px_0_#111827] transition duration-150 ease-out hover:translate-x-[3px] hover:translate-y-[4px] hover:scale-[0.98] hover:text-blue-500 hover:shadow-[2px_2px_0_#111827] active:translate-x-[5px] active:translate-y-[6px] active:scale-[0.96] active:shadow-none lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
+                className="press-button bg-white px-6 py-3 text-lg font-bold text-black hover:text-blue-500 lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
               >
                 Get in Touch
               </Link>

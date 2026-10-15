@@ -196,6 +196,30 @@
     transform: translateY(-4px);
   }
 
+  .press-button {
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 1.25rem;
+    box-shadow: 5px 6px 0 #111827;
+    transition:
+      transform 150ms ease-out,
+      box-shadow 150ms ease-out,
+      background-color 150ms ease-out,
+      border-color 150ms ease-out,
+      color 150ms ease-out;
+  }
+
+  .press-button:hover {
+    transform: translate(3px, 4px) scale(0.98);
+    box-shadow: 2px 2px 0 #111827;
+  }
+
+  .press-button:active {
+    transform: translate(5px, 6px) scale(0.96);
+    box-shadow: none;
+  }
+
   .typing-name {
     display: inline-block;
     width: 0;
@@ -228,6 +252,15 @@
 @media (prefers-reduced-motion: reduce) {
   .liquid-glass {
     transition: none;
+  }
+
+  .press-button {
+    transition: none;
+  }
+
+  .press-button:hover,
+  .press-button:active {
+    transform: none;
   }
 
   .typing-name {

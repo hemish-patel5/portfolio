@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
           </div>
           <Link
             to="/projects"
-            className="focus-lift inline-flex w-fit bg-black items-center gap-2  border border-black/20 px-5 py-3 font-bold text-white hover:text-blue-300"
+            className="press-button inline-flex w-fit items-center gap-2 bg-black px-5 py-3 font-bold text-white hover:text-blue-300"
           >
             View All
             <ArrowUpRight size={18} />
@@ -55,7 +55,7 @@ export default function FeaturedProjects() {
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
+                    className="press-button bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
                   >
                     Try Me
                   </a>
@@ -64,7 +64,7 @@ export default function FeaturedProjects() {
                   href={p.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="focus-lift border border-white/20 bg-black px-3 py-2 text-xs font-bold text-white hover:border-blue-300"
+                  className="press-button border-white/20 bg-black px-3 py-2 text-xs font-bold text-white hover:border-blue-300"
                 >
                   View Details
                 </a>

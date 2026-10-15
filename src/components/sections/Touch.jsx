@@ -15,7 +15,7 @@ export default function CTA() {
           </p>
           <Link
             to="/contact"
-            className="focus-lift mt-5 inline-flex w-fit items-center gap-2 bg-blue-400 px-6 py-4 font-bold text-white hover:bg-blue-500"
+            className="press-button mt-5 inline-flex w-fit items-center gap-2 bg-blue-400 px-6 py-4 font-bold text-white hover:bg-blue-500"
           >
             Contact Me
             <ArrowRight size={18} />
