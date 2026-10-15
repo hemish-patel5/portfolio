@@ -19,6 +19,16 @@ export const projects = [
     details:
     "This project involved building a Wi-Fi controlled robot car using an ESP32 microcontroller, DC motors, a motor driver, and a custom web interface. The ESP32 hosts a local web server that allows users to control the car’s movement, including moving forward, reversing, turning left or right, and stopping. The project strengthened my skills in embedded programming, hardware integration, networking, and real-time device control.",
     image: new URL("../assets/robo_car.png", import.meta.url).href,
+    gallery: [
+      {
+        src: new URL("../assets/robo_car.png", import.meta.url).href,
+        alt: "Wi-Fi Robot Car control app",
+      },
+      {
+        src: new URL("../assets/car.png", import.meta.url).href,
+        alt: "Physical Wi-Fi robot car",
+      },
+    ],
     skills: ["C++", "React", "JavaScript", "HTML5"],
     github: "https://github.com/hemish-patel5/Wifi-Robot-Car",
     // link: "",

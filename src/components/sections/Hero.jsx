@@ -19,7 +19,7 @@ export default function Hero() {
               </span>
             </h1>
             <p className="mt-7 text-lg leading-7 text-gray-700 lg:mt-9 lg:text-2xl lg:leading-9">
-              I'm a final-year Software Engineering student at AUT, focused on
+              I'm a Graduate Software Engineer from AUT, interested in
               full-stack development, embedded systems, and machine learning.
             </p>
 

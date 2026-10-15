@@ -1,7 +1,16 @@
+import { useState } from "react";
+import { Maximize2, Minimize2 } from "lucide-react";
 import { projects } from "@/data/projects";
 import { skillIcons } from "@/data/skills";
 
+const getProjectImages = (project) =>
+  project.gallery?.length
+    ? project.gallery
+    : [{ src: project.image, alt: project.title }];
+
 export default function Projects() {
+  const [expandedImage, setExpandedImage] = useState(null);
+
   return (
     <section className="circuit-board min-h-screen bg-slate-50">
       <div className="section-shell section-pad">
@@ -15,7 +24,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
+              className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]"
             >
               <div className="min-w-0 flex flex-col justify-between p-6 md:p-9">
                 <div>
@@ -69,12 +78,58 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex min-w-0 items-center justify-center border-t border-white/10 bg-white p-6 md:border-l md:border-t-0">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="max-h-80 w-full object-contain transition duration-500 group-hover/card:scale-105"
-                />
+              <div className="relative z-10 flex min-h-[380px] min-w-0 items-center justify-center overflow-hidden border-t border-white/10 bg-white p-4 md:min-h-0 md:border-l md:border-t-0">
+                <div
+                  className={`relative grid h-full min-h-[350px] w-full gap-3 overflow-hidden ${
+                    getProjectImages(project).length > 1
+                      ? "grid-cols-2"
+                      : "grid-cols-1"
+                  }`}
+                >
+                  {getProjectImages(project).map((image, imageIndex) => {
+                    const isExpanded =
+                      expandedImage?.projectId === project.id &&
+                      expandedImage?.imageIndex === imageIndex;
+
+                    return (
+                      <button
+                        key={image.src}
+                        type="button"
+                        aria-label={`${isExpanded ? "Collapse" : "Enlarge"} ${image.alt}`}
+                        aria-expanded={isExpanded}
+                        className={`${
+                          isExpanded
+                            ? "absolute inset-0 z-20"
+                            : "relative min-w-0"
+                        } group/image grid place-items-center overflow-hidden bg-slate-50 p-2 outline-none transition-[inset] duration-300`}
+                        onClick={() =>
+                          setExpandedImage(
+                            isExpanded
+                              ? null
+                              : { projectId: project.id, imageIndex },
+                          )
+                        }
+                      >
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className={`${
+                            isExpanded
+                              ? "h-full w-full"
+                              : "mx-auto max-h-[260px] w-[82%]"
+                          } object-contain transition-all duration-300 group-hover/image:scale-[1.02]`}
+                        />
+                        <span className="absolute right-3 top-3 grid h-6 w-6 place-items-center rounded-full bg-black text-white shadow-md">
+                          {isExpanded ? (
+                            <Minimize2 size={11} aria-hidden="true" />
+                          ) : (
+                            <Maximize2 size={11} aria-hidden="true" />
+                          )}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </article>
           ))}

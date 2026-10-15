@@ -17,8 +17,8 @@ export default function Contact() {
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="section-title text-black">Contact Me</h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-            Open to graduate software engineering roles, internships, and
-            collaborations around full-stack systems, automation, and AI.
+            Open to Graduate Software Engineering roles and
+            collaborations around Full-Stack and Embedded Systems Projects.
           </p>
         </div>
 

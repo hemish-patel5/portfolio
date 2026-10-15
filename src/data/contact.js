@@ -9,7 +9,7 @@ export const contact = [
   },
   {
     id: "availability",
-    info: "Looking for Graduate and Internship work",
+    info: "Looking for Graduate Software and Firmware Engineering roles",
   },
   {
     id: "phone number",
