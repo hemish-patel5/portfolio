@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import CustomScrollbar from "@/components/layout/CustomScrollbar";
 
 import Home from "@/pages/Home";
 import About from "@/pages/About";
@@ -25,6 +26,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <CustomScrollbar />
     </BrowserRouter>
   );
 }

@@ -8,6 +8,42 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scrollbar-color: #3b82f6 #e2e8f0;
+    scrollbar-width: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 24px;
+    height: 24px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #e2e8f0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border: 2px solid #e2e8f0;
+    border-radius: 999px;
+    background: #3b82f6;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2563eb;
+  }
+
+  @media (min-width: 768px) {
+    html {
+      scrollbar-width: none;
+    }
+
+    html::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+
+    body {
+      padding-right: 28px;
+    }
   }
 
   body {
@@ -35,6 +71,57 @@
 }
 
 @layer components {
+  .custom-scrollbar {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    display: none;
+    width: 28px;
+    height: 100vh;
+    height: 100dvh;
+    background: #e2e8f0;
+    transition: opacity 160ms ease;
+  }
+
+  .custom-scrollbar--hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .custom-scrollbar__thumb {
+    position: absolute;
+    top: 0;
+    right: 3px;
+    left: 3px;
+    min-height: 80px;
+    touch-action: none;
+    border: 0;
+    border-radius: 999px;
+    background: #3b82f6;
+    cursor: grab;
+    transition: background-color 160ms ease;
+  }
+
+  .custom-scrollbar__thumb:hover {
+    background: #2563eb;
+  }
+
+  .custom-scrollbar__thumb:active {
+    cursor: grabbing;
+  }
+
+  .custom-scrollbar:focus-visible {
+    outline: 2px solid #1d4ed8;
+    outline-offset: -2px;
+  }
+
+  @media (min-width: 768px) {
+    .custom-scrollbar {
+      display: block;
+    }
+  }
+
   .section-shell {
     width: min(1120px, calc(100% - 2rem));
     margin-inline: auto;
