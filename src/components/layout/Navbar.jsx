@@ -15,9 +15,7 @@ export default function Navbar() {
           onClick={() => setIsOpen(false)}
           className="group flex items-center gap-3"
         >
-          <span className="grid h-10 w-10 place-items-center border border-blue-400 bg-blue-400 text-lg font-extrabold text-black transition group-hover:bg-white">
-            HP
-          </span>
+
           <span className="leading-tight">
             <span className="block text-lg font-bold text-white">
               Hemish Patel

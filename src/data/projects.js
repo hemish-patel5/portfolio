@@ -3,9 +3,9 @@ export const projects = [
     id: "grocery",
     title: "Grocery Price Comparison System",
     description:
-      "A full-stack web application that helps users search for groceries and compare prices across Woolworths, New World, and Pak'nSave.",
+    "A full-stack web application that helps users search for groceries and compare prices across Woolworths, New World, and Pak'nSave.",
     details:
-      "Built with React, Python, Flask, REST APIs, and Tailwind CSS, the website combines API and web-scraped product data from major New Zealand supermarkets. It provides a responsive search and comparison interface, normalises data from multiple sources, and handles timeouts or unavailable results gracefully.",
+    "Built with React, Python, Flask, REST APIs, and Tailwind CSS, the website combines API and web-scraped product data from major New Zealand supermarkets. It provides a responsive search and comparison interface, normalises data from multiple sources, and handles timeouts or unavailable results gracefully.",
     image: new URL("../assets/grocery.PNG", import.meta.url).href,
     skills: ["Python", "React", "Flask", "Tailwind CSS", "PostgreSQL"],
     github: "https://github.com/hemish-patel5/Grocery-Price-Comparison-",
@@ -15,21 +15,44 @@ export const projects = [
     id: "robocar",
     title: "Wi-Fi Robot Car",
     description:
-      "An ESP32-based robot car that can be controlled wirelessly through a web interface using a phone or computer.",
+    "An ESP32-based robot car that can be controlled wirelessly through a web interface using a phone or computer.",
     details:
-      "This project involved building a Wi-Fi controlled robot car using an ESP32 microcontroller, DC motors, a motor driver, and a custom web interface. The ESP32 hosts a local web server that allows users to control the car’s movement, including moving forward, reversing, turning left or right, and stopping. The project strengthened my skills in embedded programming, hardware integration, networking, and real-time device control.",
+    "This project involved building a Wi-Fi controlled robot car using an ESP32 microcontroller, DC motors, a motor driver, and a custom web interface. The ESP32 hosts a local web server that allows users to control the car’s movement, including moving forward, reversing, turning left or right, and stopping. The project strengthened my skills in embedded programming, hardware integration, networking, and real-time device control.",
     image: new URL("../assets/robo_car.png", import.meta.url).href,
     skills: ["C++", "React", "JavaScript", "HTML5"],
     github: "https://github.com/hemish-patel5/Wifi-Robot-Car",
     // link: "",
   },
   {
+    id: "bettertracker",
+    title: "BetterTracker",
+    description:
+      "A job application tracker for managing, searching, filtering, and updating applications in one place. It automatically pings your phone with any application updates",
+    details:
+      "Built with Java, TypeScript, and PostgreSQL, BetterTracker provides full job-application management with search, filtering, and sorting. It also integrates with Gmail to surface job-related emails, detects application outcomes, prevents duplicate messages, and can send phone notifications when an application is updated.",
+    image: new URL("../assets/job_tracker.png", import.meta.url).href,
+    skills: ["Java", "PostgreSQL", "React", "TypeScript"],
+    github: "https://github.com/hemish-patel5/JobTracker",
+    link: "https://bettertracker.vercel.app/",
+  },
+  {
+    id: "rubiks",
+    title: "Rubik's Cube Solver",
+    description:
+      "A Raspberry Pi-based assistant that scans a 3×3 Rubik's Cube, calculates a solution, and guides the user through each move.",
+    details:
+      "Built with Python and Bash, this embedded system uses computer vision to recognise and validate cube colours before calculating a solution. It supports guided scanning, step-by-step move instructions, solve-history tracking, and a motorised platform that automatically rotates the cube between scans.",
+    image: new URL("../assets/rubiks.png", import.meta.url).href,
+    skills: ["Python", "Bash", "PHP"],
+    github: "https://github.com/hemish-patel5/Rubiks-Cube-Solver",
+  },
+  {
     id: "skincancer",
     title: "Interpretable Skin Cancer Detection",
     description:
-      "A machine learning research project that classifies dermoscopic skin lesion images as benign or malignant using handcrafted features and an interpretable Learning Classifier System.",
+    "A machine learning research project that classifies dermoscopic skin lesion images as benign or malignant using handcrafted features and an interpretable Learning Classifier System.",
     details:
-      "This project investigates how handcrafted feature extraction methods can be combined with an explainable Learning Classifier System (eLCS) to classify skin lesions as benign or malignant. Features such as asymmetry, border irregularity, colour variation, texture, and lesion shape are extracted from dermoscopic images and evaluated using feature-selection and dimensionality-reduction techniques. Unlike black-box deep learning models, eLCS produces human-readable IF-THEN rules that can help explain the reasoning behind each prediction.",
+    "This project investigates how handcrafted feature extraction methods can be combined with an explainable Learning Classifier System (eLCS) to classify skin lesions as benign or malignant. Features such as asymmetry, border irregularity, colour variation, texture, and lesion shape are extracted from dermoscopic images and evaluated using feature-selection and dimensionality-reduction techniques. Unlike black-box deep learning models, eLCS produces human-readable IF-THEN rules that can help explain the reasoning behind each prediction.",
     image: new URL("../assets/cancer.PNG", import.meta.url).href,
     skills: ["Python", "React", "JavaScript"],
     github:
@@ -41,7 +64,7 @@ export const projects = [
     title: "IoT Smart Queue Monitoring System",
     description:
       "An IoT system that monitors room occupancy and environmental conditions to estimate queue lengths and waiting times in real time.",
-    image: new URL("../assets/iot.PNG", import.meta.url).href,
+    image: new URL("../assets/queue_predict.png", import.meta.url).href,
     skills: ["Python", "Flask", "React", "JavaScript"],
     github: "https://github.com/hemish-patel5/Queue-Predictor-IoT",
     link: "https://queue-predictor-iot.vercel.app/",
