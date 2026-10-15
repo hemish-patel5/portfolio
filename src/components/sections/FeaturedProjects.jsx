@@ -6,7 +6,10 @@ export default function FeaturedProjects() {
   const featured = projects.slice(0, 3);
 
   return (
-    <section className="bg-white section-pad text-white">
+    <section
+      id="featured-projects"
+      className="scroll-mt-8 bg-white section-pad text-white"
+    >
       <div className="section-shell">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
           <div>
@@ -47,14 +50,16 @@ export default function FeaturedProjects() {
               </div>
 
               <div className="relative z-10 mt-4 flex items-center justify-center gap-2 border-t border-white/10 pt-4">
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
-                >
-                  Try Me
-                </a>
+                {p.link && (
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="focus-lift bg-white px-3 py-2 text-xs font-bold text-black hover:bg-gray-200"
+                  >
+                    Try Me
+                  </a>
+                )}
                 <a
                   href={p.github}
                   target="_blank"
