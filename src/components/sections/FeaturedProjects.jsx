@@ -8,7 +8,7 @@ export default function FeaturedProjects() {
   return (
     <section
       id="featured-projects"
-      className="scroll-mt-8 bg-white section-pad text-white"
+      className="scroll-mt-8 bg-slate-50 section-pad text-white"
     >
       <div className="section-shell">
         <div className="mb-12 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
