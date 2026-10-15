@@ -58,7 +58,7 @@ export default function Experience() {
         </div>
 
         <div className="relative mt-14">
-          <div className="absolute left-4 top-0 hidden h-full w-px bg-gray-300 md:block" />
+          <div className="absolute left-[15px] top-0 hidden h-full w-0.5 bg-slate-500 md:block" />
 
           <div className="grid gap-8">
             {experiences.map((work, index) => (
@@ -67,7 +67,7 @@ export default function Experience() {
                 className="relative grid gap-5 md:grid-cols-[3rem_1fr]"
               >
                 <div className="hidden md:block">
-                  <div className="relative z-10 grid h-8 w-8 place-items-center border-2 border-black bg-blue-400 text-sm font-extrabold text-black">
+                  <div className="relative z-10 mt-12 grid h-8 w-8 place-items-center rounded-full border-3 border-black bg-blue-400 text-sm font-extrabold text-black">
                     {index + 1}
                   </div>
                 </div>

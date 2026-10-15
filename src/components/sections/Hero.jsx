@@ -1,72 +1,60 @@
-import profileImg from "@/assets/profile1.png";
+import profileImg from "@/assets/Portfolio avatar · 600 × 600.png";
+import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="paper-grid border-b border-gray-200">
-      <div className="section-shell grid min-h-[calc(100vh-72px)] items-center gap-12 py-14 md:py-20 lg:grid-cols-[1.05fr_0.95fr]">
-        <div>
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-400">
-            Final Year Software Engineering Student
-          </p>
-          <h1 className="section-title max-w-3xl text-black">
-            Hi, I'm
-            <br />
-            <span className="typing-name text-blue-500 transition-colors duration-300 hover:text-blue-400">
-              Hemish Patel
-            </span>
-          </h1>
-
-          <div className="mt-8 max-w-2xl space-y-5 border-l-2 border-black pl-5">
-            <p className="text-2xl font-semibold leading-tight text-gray-950 md:text-3xl">
-              I'm a Final Year{" "}
-              <span className="text-blue-500">Software Engineering</span>{" "}
-              student at AUT, focusing on{" "}
-              <span className="text-blue-500">Full-Stack</span>,
-              {" "}
-              <span className="whitespace-nowrap">
-                <span className="text-blue-500">Embedded Systems</span> and{" "}
-                <span className="text-blue-500">Machine Learning</span>
-              </span>
-              .
+    <section className="bg-slate-50">
+      <div className="relative grid min-h-[calc(100svh-72px)] w-full place-items-center px-6 pb-24 pt-12 sm:px-10 md:min-h-[calc(100svh-94px)] lg:px-16">
+        <div className="grid w-full max-w-[1040px] items-center gap-12 md:grid-cols-[0.95fr_1.05fr] md:gap-20 lg:gap-24">
+          <div className="max-w-lg">
+            <p className="ml-1 translate-y-2 text-base font-semibold text-blue-500 lg:text-xl">
+              Graduate Software Engineer
             </p>
-          </div>
+            <h1 className="mt-8 text-4xl font-extrabold leading-[0.95] text-black sm:text-5xl lg:mt-10 lg:text-[4rem]">
+              Hi, I'm
+              <br />
+              <span className="typing-name text-blue-500 transition-colors duration-300 hover:text-blue-400">
+                Hemish Patel
+              </span>
+            </h1>
+            <p className="mt-7 text-lg leading-7 text-gray-700 lg:mt-9 lg:text-2xl lg:leading-9">
+              I'm a final-year Software Engineering student at AUT, focused on
+              full-stack development, embedded systems, and machine learning.
+            </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link
-              to="/projects"
-              className="focus-lift inline-flex items-center gap-2 bg-black px-6 py-4 font-bold text-white shadow-xl shadow-black/10 hover:bg-blue-500"
-            >
-              View Projects
-              <ArrowRight size={18} />
-            </Link>
-            <Link
-              to="/contact"
-              className="focus-lift inline-flex items-center gap-2 border border-black bg-white px-6 py-4 font-bold text-black hover:border-blue-500 hover:text-blue-500"
-            >
-              Get in Touch
-              <Mail size={18} />
-            </Link>
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-[430px]">
-          <div className="absolute -left-5 top-8 hidden h-full w-full border-2 border-black md:block" />
-          <div className="relative border-2 border-black bg-white p-3 shadow-2xl shadow-gray-300/70">
-            <img
-              src={profileImg}
-              alt="Hemish"
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <div className="absolute -right-4 bottom-8 border-2 border-black bg-blue-400 px-5 py-4 text-black shadow-xl">
-              <p className="text-xs font-bold uppercase tracking-[0.2em]">
-                Auckland
-              </p>
-              <p className="text-2xl font-extrabold">NZ</p>
+            <div className="mt-8 flex flex-wrap gap-4 lg:mt-10 lg:gap-5">
+              <Link
+                to="/projects"
+                className="press-button bg-white px-6 py-3 text-lg font-bold text-black hover:text-blue-500 lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
+              >
+                View Projects
+              </Link>
+              <Link
+                to="/contact"
+                className="press-button bg-white px-6 py-3 text-lg font-bold text-black hover:text-blue-500 lg:rounded-[1.5rem] lg:px-8 lg:py-4 lg:text-xl"
+              >
+                Get in Touch
+              </Link>
             </div>
           </div>
+
+          <div className="relative mx-auto w-full max-w-[350px] lg:max-w-[455px]">
+            <img
+              src={profileImg}
+              alt="Hemish Patel"
+              className="aspect-square w-full object-contain"
+            />
+          </div>
         </div>
+
+        <a
+          href="#featured-projects"
+          aria-label="Scroll to featured projects"
+          className="absolute bottom-7 left-1/2 grid h-11 w-11 -translate-x-1/2 place-items-center text-black transition hover:text-blue-500"
+        >
+          <ArrowDown size={21} strokeWidth={1.7} />
+        </a>
       </div>
     </section>
   );

@@ -1,11 +1,9 @@
-import { Link } from "react-router-dom";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
 import { projects } from "@/data/projects";
 import { skillIcons } from "@/data/skills";
 
 export default function Projects() {
   return (
-    <section className="paper-grid min-h-screen">
+    <section className="circuit-board min-h-screen bg-slate-50">
       <div className="section-shell section-pad">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
@@ -14,7 +12,7 @@ export default function Projects() {
         </div>
 
         <div className="mt-14 grid gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <article
               key={project.id}
               className="blueprint-card focus-lift group/card grid min-h-[450px] text-white md:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
@@ -50,22 +48,22 @@ export default function Projects() {
                 </div>
 
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="focus-lift inline-flex items-center gap-2 bg-gray-100 px-5 py-3 font-bold text-black hover:bg-white"
-                  >
-                    {/* <ExternalLink size={18} /> */}
-                    Try Me
-                  </a>
+                  {project.link?.trim() && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="press-button inline-flex items-center gap-2 bg-gray-100 px-5 py-3 font-bold text-black hover:bg-white"
+                    >
+                      Try Me
+                    </a>
+                  )}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="focus-lift inline-flex items-center gap-2 border bg-black border-white/20 px-5 py-3 font-bold text-white hover:border-blue-300"
+                    className="press-button inline-flex items-center gap-2 border-white/20 bg-black px-5 py-3 font-bold text-white hover:border-blue-300"
                   >
-                    {/* <ExternalLink size={18} /> */}
                     View Details
                   </a>
                 </div>
