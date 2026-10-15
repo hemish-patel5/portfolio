@@ -7,7 +7,7 @@ export default function SkillsPreview() {
   };
 
   return (
-    <section className="section-pad paper-grid border-b border-gray-200">
+    <section className="circuit-board section-pad border-b border-gray-200">
       <div className="section-shell">
         <div className="grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-end">
           <div>

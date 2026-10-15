@@ -5,7 +5,7 @@ import { skillIcons } from "@/data/skills";
 
 export default function Projects() {
   return (
-    <section className="paper-grid min-h-screen">
+    <section className="circuit-board min-h-screen">
       <div className="section-shell section-pad">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
