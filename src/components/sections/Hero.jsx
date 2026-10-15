@@ -1,4 +1,4 @@
-import profileImg from "@/assets/profile1.png";
+import profileImg from "@/assets/Portfolio avatar · 600 × 600.png";
 import { ArrowDown } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -40,14 +40,11 @@ export default function Hero() {
           </div>
 
           <div className="relative mx-auto w-full max-w-[350px] lg:max-w-[455px]">
-            <div className="absolute -right-3 -top-3 h-20 w-20 bg-blue-400 lg:-right-4 lg:-top-4 lg:h-[104px] lg:w-[104px]" />
-            <div className="relative border border-black bg-white p-2 lg:p-3">
-              <img
-                src={profileImg}
-                alt="Hemish Patel"
-                className="aspect-square w-full object-cover"
-              />
-            </div>
+            <img
+              src={profileImg}
+              alt="Hemish Patel"
+              className="aspect-square w-full object-contain"
+            />
           </div>
         </div>
 
