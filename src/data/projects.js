@@ -49,12 +49,12 @@ export const projects = [
     id: "usagedisplay",
     title: "Usage Limits Display",
     description:
-      "A compact desktop display that shows remaining usage allowances and the time until each limit resets at a glance.",
+      "A compact desktop display that shows remaining usage allowances and the time until each limit resets at a glance. Also displays Date/Time and PC performance",
     details:
       "This physical status display presents current usage-limit percentages and reset countdowns on a character LCD. A rotary control provides a simple way to move between tracked limits, while the electronics are housed in a custom 3D-printed enclosure for a practical, always-visible desktop dashboard.",
     image: new URL("../assets/display.jpeg", import.meta.url).href,
     skills: ["Rust", "C++", "JavaScript"],
-    github: "https://github.com/hemish-patel5/JobTracker",
+    github: "https://github.com/hemish-patel5/usage-limit-display",
   },
   {
     id: "rubiks",
