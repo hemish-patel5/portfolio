@@ -1,11 +1,7 @@
 import { skills } from "@/data/skills";
+import SkillCard from "@/components/ui/SkillCard";
 
 export default function SkillsPreview() {
-  const getSkillName = (url) => {
-    const skill = url.split("/icons/")[1]?.split("/")[0];
-    return skill ? skill.replace("cplusplus", "c++") : "skill";
-  };
-
   return (
     <section className="circuit-board section-pad bg-slate-50">
       <div className="section-shell">
@@ -19,19 +15,8 @@ export default function SkillsPreview() {
         </div>
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-5">
-          {skills.map((url, index) => (
-            <div
-              key={index}
-              className="focus-lift group flex min-h-36 items-center justify-center p-2 text-center"
-            >
-              <div className="liquid-glass">
-                <img
-                  src={url}
-                  alt={`${getSkillName(url)} logo`}
-                  className="liquid-glass__icon"
-                />
-              </div>
-            </div>
+          {skills.map((skill) => (
+            <SkillCard key={skill.name} {...skill} />
           ))}
         </div>
       </div>

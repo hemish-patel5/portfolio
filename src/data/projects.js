@@ -41,9 +41,20 @@ export const projects = [
     details:
       "Built with Java, TypeScript, and PostgreSQL, BetterTracker provides full job-application management with search, filtering, and sorting. It also integrates with Gmail to surface job-related emails, detects application outcomes, prevents duplicate messages, and can send phone notifications when an application is updated.",
     image: new URL("../assets/job_tracker.png", import.meta.url).href,
-    skills: ["Java", "PostgreSQL", "React", "TypeScript"],
+    skills: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript"],
     github: "https://github.com/hemish-patel5/JobTracker",
     link: "https://bettertracker.vercel.app/",
+  },
+  {
+    id: "usagedisplay",
+    title: "Usage Limits Display",
+    description:
+      "A compact desktop display that shows remaining usage allowances and the time until each limit resets at a glance.",
+    details:
+      "This physical status display presents current usage-limit percentages and reset countdowns on a character LCD. A rotary control provides a simple way to move between tracked limits, while the electronics are housed in a custom 3D-printed enclosure for a practical, always-visible desktop dashboard.",
+    image: new URL("../assets/display.jpeg", import.meta.url).href,
+    skills: ["Rust", "C++", "JavaScript"],
+    github: "https://github.com/hemish-patel5/JobTracker",
   },
   {
     id: "rubiks",
@@ -64,7 +75,7 @@ export const projects = [
     details:
     "This project investigates how handcrafted feature extraction methods can be combined with an explainable Learning Classifier System (eLCS) to classify skin lesions as benign or malignant. Features such as asymmetry, border irregularity, colour variation, texture, and lesion shape are extracted from dermoscopic images and evaluated using feature-selection and dimensionality-reduction techniques. Unlike black-box deep learning models, eLCS produces human-readable IF-THEN rules that can help explain the reasoning behind each prediction.",
     image: new URL("../assets/cancer.PNG", import.meta.url).href,
-    skills: ["Python", "React", "JavaScript"],
+    skills: ["Python", "FastAPI", "React", "JavaScript"],
     github:
       "https://github.com/hemish-patel5/interpretable-skin-cancer-detection",
     // link: "",
@@ -75,7 +86,7 @@ export const projects = [
     description:
       "An IoT system that monitors room occupancy and environmental conditions to estimate queue lengths and waiting times in real time.",
     image: new URL("../assets/queue_predict.png", import.meta.url).href,
-    skills: ["Python", "Flask", "React", "JavaScript"],
+    skills: ["Python", "FastAPI", "React", "JavaScript"],
     github: "https://github.com/hemish-patel5/Queue-Predictor-IoT",
     link: "https://queue-predictor-iot.vercel.app/",
   },
