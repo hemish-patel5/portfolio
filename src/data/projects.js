@@ -12,6 +12,28 @@ export const projects = [
     link: "https://grocery-price-comparison-delta.vercel.app/",
   },
   {
+    id: "nfc",
+    title: "NFC Music Player",
+    description:
+      "A standalone music player that uses physical NFC tags to select and play songs through a compact, physical jukebox.",
+    details:
+      "Built with C++ and TypeScript, the system pairs an NFC-enabled music player with a web dashboard for managing a song library and assigning music to physical tags. The player reads an NFC tag, resolves its assigned track, and plays the audio locally, while the dashboard supports searching saved songs, uploading MP3 files, and writing music assignments to tags.",
+    image: new URL("../assets/nfc.png", import.meta.url).href,
+    gallery: [
+      {
+        src: new URL("../assets/nfc.png", import.meta.url).href,
+        alt: "Physical NFC music player",
+      },
+      {
+        src: new URL("../assets/nfc_web.png", import.meta.url).href,
+        alt: "NFC music player web dashboard",
+      },
+    ],
+    skills: ["C++", "TypeScript"],
+    github: "https://github.com/hemish-patel5/nfc-music-player",
+    // link: "",
+  },
+  {
     id: "robocar",
     title: "Wi-Fi Robot Car",
     description:
