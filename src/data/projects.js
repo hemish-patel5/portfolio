@@ -34,6 +34,29 @@ export const projects = [
     // link: "",
   },
   {
+    id: "bettertracker",
+    title: "BetterTracker",
+    description:
+      "A job application tracker for managing, searching, filtering, and updating applications in one place. It automatically pings your phone with any application updates",
+    details:
+      "Built with Java, TypeScript, and PostgreSQL, BetterTracker provides full job-application management with search, filtering, and sorting. It also integrates with Gmail to surface job-related emails, detects application outcomes, prevents duplicate messages, and can send phone notifications when an application is updated.",
+    image: new URL("../assets/job_tracker.png", import.meta.url).href,
+    skills: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript"],
+    github: "https://github.com/hemish-patel5/JobTracker",
+    link: "https://bettertracker.vercel.app/",
+  },
+  {
+    id: "usage display",
+    title: "Usage Limits Display",
+    description:
+      "A compact desktop display that shows remaining usage allowances and the time until each limit resets at a glance. Also displays Date/Time and PC performance",
+    details:
+      "This physical status display presents current usage-limit percentages and reset countdowns on a character LCD. A rotary control provides a simple way to move between tracked limits, while the electronics are housed in a custom 3D-printed enclosure for a practical, always-visible desktop dashboard.",
+    image: new URL("../assets/display.jpeg", import.meta.url).href,
+    skills: ["Rust", "C++", "JavaScript"],
+    github: "https://github.com/hemish-patel5/usage-limit-display",
+  },
+  {
     id: "robocar",
     title: "Wi-Fi Robot Car",
     description:
@@ -56,40 +79,6 @@ export const projects = [
     // link: "",
   },
   {
-    id: "bettertracker",
-    title: "BetterTracker",
-    description:
-      "A job application tracker for managing, searching, filtering, and updating applications in one place. It automatically pings your phone with any application updates",
-    details:
-      "Built with Java, TypeScript, and PostgreSQL, BetterTracker provides full job-application management with search, filtering, and sorting. It also integrates with Gmail to surface job-related emails, detects application outcomes, prevents duplicate messages, and can send phone notifications when an application is updated.",
-    image: new URL("../assets/job_tracker.png", import.meta.url).href,
-    skills: ["Java", "Spring Boot", "PostgreSQL", "React", "TypeScript"],
-    github: "https://github.com/hemish-patel5/JobTracker",
-    link: "https://bettertracker.vercel.app/",
-  },
-  {
-    id: "usagedisplay",
-    title: "Usage Limits Display",
-    description:
-      "A compact desktop display that shows remaining usage allowances and the time until each limit resets at a glance. Also displays Date/Time and PC performance",
-    details:
-      "This physical status display presents current usage-limit percentages and reset countdowns on a character LCD. A rotary control provides a simple way to move between tracked limits, while the electronics are housed in a custom 3D-printed enclosure for a practical, always-visible desktop dashboard.",
-    image: new URL("../assets/display.jpeg", import.meta.url).href,
-    skills: ["Rust", "C++", "JavaScript"],
-    github: "https://github.com/hemish-patel5/usage-limit-display",
-  },
-  {
-    id: "rubiks",
-    title: "Rubik's Cube Solver",
-    description:
-      "A Raspberry Pi-based assistant that scans a 3×3 Rubik's Cube, calculates a solution, and guides the user through each move.",
-    details:
-      "Built with Python and Bash, this embedded system uses computer vision to recognise and validate cube colours before calculating a solution. It supports guided scanning, step-by-step move instructions, solve-history tracking, and a motorised platform that automatically rotates the cube between scans.",
-    image: new URL("../assets/rubiks.png", import.meta.url).href,
-    skills: ["Python", "Bash", "PHP"],
-    github: "https://github.com/hemish-patel5/Rubiks-Cube-Solver",
-  },
-  {
     id: "skincancer",
     title: "Interpretable Skin Cancer Detection",
     description:
@@ -101,6 +90,17 @@ export const projects = [
     github:
       "https://github.com/hemish-patel5/interpretable-skin-cancer-detection",
     // link: "",
+  },
+  {
+    id: "rubiks",
+    title: "Rubik's Cube Solver",
+    description:
+      "A Raspberry Pi-based assistant that scans a 3×3 Rubik's Cube, calculates a solution, and guides the user through each move.",
+    details:
+      "Built with Python and Bash, this embedded system uses computer vision to recognise and validate cube colours before calculating a solution. It supports guided scanning, step-by-step move instructions, solve-history tracking, and a motorised platform that automatically rotates the cube between scans.",
+    image: new URL("../assets/rubiks.png", import.meta.url).href,
+    skills: ["Python", "Bash", "PHP"],
+    github: "https://github.com/hemish-patel5/Rubiks-Cube-Solver",
   },
   {
     id: "iot",
